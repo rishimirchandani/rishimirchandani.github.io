@@ -1,14 +1,42 @@
 import React from 'react';
 
+const navItems = ["home", "about", "media", "contact"];
+const navList = navItems.map((navItem)=> 
+    <li><a href={`#${navItem}`}>{navItem}</a></li>
+);
+
 class Navbar extends React.Component {
+    componentDidMount() {
+        window.addEventListener("scroll", this.resizeOnScroll);
+    }
+    resizeOnScroll() {
+        const distY = window.pageYOffset || document.documentElement.scrollTop;
+        const shrinkY = 400;
+        const navbar = document.getElementsByClassName("Navbar")[0];
+        const nav = document.getElementsByClassName("Nav")[0];
+        const title = document.getElementsByClassName("Title")[0];
+        if (distY > shrinkY) {
+            navbar.classList.add("Navbar-top");
+            nav.classList.add("Nav-top");
+            title.classList.add("Title-top");
+        }
+        else {
+            navbar.classList.remove("Navbar-top");
+            nav.classList.remove("Nav-top");
+            title.classList.remove("Title-top");           
+        }
+    }
     render() {
         return (
-            <div className='Navbar-div'>
+            <div class="Navbar">
+            <h1 class="Title">
+                Rishi Mirchandani
+            </h1>
+            <div className='Nav'>
                 <ul id='nav'>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
+                    {navList}
                 </ul>
+            </div>
             </div>
         )
     }

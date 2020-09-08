@@ -1,0 +1,49 @@
+{
+    "about": {
+        "_comment": "Bio can be edited here directly. Use \n for newlines.",
+
+        "bio": "Rishi Mirchandani is an Indian-American pianist. He has appeared in three recitals at Carnegie Hall in New York, where he debuted at the age of 12. His competition accolades include three gold medals in the World Piano Competition's Young Artist Division and three first prizes at the Duquesne Young Artist National Competition. He has given concerto performances across the country, including his major orchestral debut with the Pittsburgh Symphony Orchestra at the age of 18.\n Outside New York, he has appeared at Heinz Hall in Pittsburgh, the Aronoff Center in Cincinnati, Centro Cultural de Belém in Portugal, Real Collegio di Lucca in Italy, and more. He recorded a contemporary solo piano work by Nancy Galbraith for the album Strange Travels (Centaur Records), which garnered a spot on Fanfare Magazine's \"Want List\" in 2015.\n Mirchandani graduated summa cum laude with a bachelor's degree in mathematics from Yale University. He earned Distinction in Mathematics and was one of twelve students from his class (top 1%) elected to Phi Beta Kappa as a junior. While pursuing his mathematics studies, he also studied piano with Elizabeth Parisot and founded the Yale Undergraduate Piano Collective. At commencement, he received the Stanton Wheeler and Marcia Chambers Award for outstanding artistic contributions to campus life.\n Mirchandani is now pursuing a master's degree in piano performance at the Manhattan School of Music as a winner of the President's Award scholarship. He formerly studied with Solomon Mikowsky and currently studies with Jeffrey Cohen."
+    },
+    "media": {
+        "_comment": "There are 4 types of clips that are supported: youtube, spotify-playlist, mp3, and video. id defines the source of the clip, and should be set as follows.  For youtube, whatever comes after v= in the URL. For spotify-playlist, the URI (right click playlist to get this). For mp3, place the entire public Google Drive link (it should end with /preview).",
+
+        "clips": [
+            {
+                "type": "youtube",
+                "heading": "Excerpt: Ravel Piano Concerto with the Pittsburgh Symphony Orchestra (2015)",
+                "subheading": null,
+                "id": "wolM_AUS9Ls"
+            },
+            {
+                "type": "youtube",
+                "heading": "Masterclass with Lang Lang (2008)",
+                "subheading": null,
+                "id": "Subm4lM-0Zw?start=454"
+            },
+            {
+                "type": "youtube",
+                "heading": "Stravinsky: Piano-Rag-Music",
+                "subheading": null,
+                "id": "w0mmoTdv2wY"
+            },
+            {
+                "type": "youtube",
+                "heading": "Chausson: Chanson d'amour",
+                "subheading": "with Lisl Wangermann",
+                "id": "ensYp6iyAfU"
+            },
+            {
+                "type": "spotify-playlist",
+                "heading": "Strange Travels (Nancy Galbraith)",
+                "subheading": null,
+                "id": "4nt2acK79D6uOy9uVmZ6gH"
+            },
+            {
+                "type": "mp3",
+                "heading": "Interview with Saturday Light Brigade",
+                "subheading": null,
+                "id": "https://drive.google.com/file/d/1I9rwvRT36xXXYDQj0-ZMumEa_Smx1pZa/preview"
+            }
+        ]
+    }
+}
