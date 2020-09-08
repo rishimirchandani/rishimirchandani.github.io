@@ -25,7 +25,7 @@ html {
 }
 
 .Hero-top {
-    opacity: 50%;
+    opacity: .5;
 }
 
 .Wide img {
@@ -54,7 +54,7 @@ html {
 }
 
 .Nav {
-    opacity: 50%;
+    opacity: .5;
     text-transform: lowercase;
 }
 
@@ -116,7 +116,7 @@ h2 {
 }
 
 .Section p {
-    opacity: 80%;
+    opacity: .8;
 }
 
 .About p {
@@ -137,7 +137,7 @@ h2 {
 h3 {
     margin-top: 4em;
     font-weight: 100;
-    opacity: 70%;
+    opacity: .7;
     padding-bottom: 1em;
     border-bottom: 1px solid grey;
     letter-spacing: 0.10em;

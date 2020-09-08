@@ -6,7 +6,7 @@ class Contact extends React.Component {
             <div className="Section Contact">
                 <h2 id="contact">Contact</h2>
                 <p>Please email <a href="mailto:contact@rishimirchandani.com">contact@rishimirchandani.com</a>, or use the form below.</p>
-                <form method="post" action="" method="POST">
+                <form action="" method="POST">
                     <input type="text" name="name" placeholder="Name" />
                     <input type="text" name="Email" placeholder="Email" />
                     <textarea name="message" placeholder="Message"></textarea>

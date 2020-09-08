@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data/data.json'
+import data from '../data.json'
 
 class Media extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class Media extends React.Component {
                             <div>
                                 <h3>{clip.heading}</h3>
                                 <p>{clip.subheading}</p>
-                                <iframe class="Video" src={`https://www.youtube.com/embed/${clip.id}?modestbranding=1&rel=0`} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowfullscreen></iframe>
+                                <iframe class="Video" title={clip.id} src={`https://www.youtube.com/embed/${clip.id}?modestbranding=1&rel=0`} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowfullscreen></iframe>
                             </div>
                         );
                     }
@@ -22,20 +22,20 @@ class Media extends React.Component {
                             <div>
                                 <h3>{clip.heading}</h3>
                                 <p>{clip.subheading}</p>
-                                <iframe class="Spotify" src={`https://open.spotify.com/embed/playlist/${clip.id}`} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                <iframe class="Spotify" title={clip.id} src={`https://open.spotify.com/embed/playlist/${clip.id}`} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                             </div>
                         )
                     }
-                    else if (clip.type === "mp3") {
+                    else {
                         return (
                             <div>
                                 <h3>{clip.heading}</h3>
                                 <p>{clip.subheading}</p>
-                                <iframe class="MP3" src={clip.id} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                <iframe class="MP3" title={clip.id} src={clip.id} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                             </div>
                         )
                     }
-})}
+                })}
                 </div>
             </div>
         )

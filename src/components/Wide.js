@@ -4,7 +4,7 @@ class Wide extends React.Component {
     render() {
         return (
             <div class="Wide">
-                <img src={this.props.src}></img>
+                <img alt="" src={this.props.src}></img>
             </div>
         );
     }
