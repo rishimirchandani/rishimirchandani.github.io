@@ -11,7 +11,7 @@ class Navbar extends React.Component {
     }
     resizeOnScroll() {
         const distY = window.pageYOffset || document.documentElement.scrollTop;
-        const shrinkY = 400;
+        const shrinkY = 380;
         const navbar = document.getElementsByClassName("Navbar")[0];
         const nav = document.getElementsByClassName("Nav")[0];
         const title = document.getElementsByClassName("Title")[0];
@@ -19,8 +19,13 @@ class Navbar extends React.Component {
             navbar.classList.add("Navbar-top");
             nav.classList.add("Nav-top");
             title.classList.add("Title-top");
+            navbar.style.opacity = 1;
+        }
+        else if (distY > shrinkY - 300) {
+            navbar.style.opacity = 0.5;
         }
         else {
+            navbar.style.opacity = 1;
             navbar.classList.remove("Navbar-top");
             nav.classList.remove("Nav-top");
             title.classList.remove("Title-top");           

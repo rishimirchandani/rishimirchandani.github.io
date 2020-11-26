@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import About from './components/About'
+import Quotes from './components/Quotes'
 import Media from './components/Media'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
           <Navbar />
           <Hero src="/hero.png"/>
+          <Quotes />
           <About />
           <Media />
           <Wide src="/pan.png"/>
