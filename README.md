@@ -13,7 +13,7 @@
 - When you are done editing, type Ctrl-C in the Terminal window.
 - To publish the changes, run the following:
 ```
-git commit -m "description of updates"
+git commit -am "description of updates"
 git push origin master
 npm run deploy
 ```
