@@ -10,7 +10,6 @@ import Wide from './components/Wide'
 import './App.css';
 
 function App() {
-  document.title = "Rishi Mirchandani"
   return (
       <div className="App">
           <Navbar />
