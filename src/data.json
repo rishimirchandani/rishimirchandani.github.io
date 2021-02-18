@@ -37,6 +37,13 @@
                 "tag": "dun"
             },
             {
+                "type": "youtube",
+                "heading": "Rachmaninoff: Etude-Tableaux in D Major, Op. 39, No. 9",
+                "subheading": null,
+                "id": "b_0SuNAEONo",
+                "tag": "rach-etude"
+            },
+            {
                 "type": "spotify-playlist",
                 "heading": "Galbraith: Three Preludes for Piano (Centaur Records)",
                 "subheading": null,
