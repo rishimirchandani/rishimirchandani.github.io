@@ -44,6 +44,13 @@
                 "tag": "beethoven-101"
             },
             {
+                "type": "youtube",
+                "heading": "Schumann: Humoreske in B-flat Major, Op. 20: IV. Innig",
+                "subheading": null,
+                "id": "pJO4kt4k30U",
+                "tag": "schumann-innig"
+            },
+            {
                 "type": "spotify-playlist",
                 "heading": "Galbraith: Three Preludes for Piano (Centaur Records)",
                 "subheading": null,
