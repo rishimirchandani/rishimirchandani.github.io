@@ -15,7 +15,7 @@ class About extends React.Component {
                 
                 <p> Mirchandani is a native of Pittsburgh, where he studied with Luz Manríquez. In 2019, he graduated <i>summa cum laude</i> from Yale University with a bachelor's degree in mathematics. He earned Distinction in Mathematics and was one of twelve students from his class (top 1%) elected to Phi Beta Kappa as a junior. While pursuing his mathematics studies, he also studied piano with Elizabeth Parisot and founded the <a href="http://yalepiano.org/"  target="_blank" rel="noopener noreferrer">Yale Undergraduate Piano Collective</a>. At commencement, he received the Stanton Wheeler and Marcia Chambers Award for outstanding artistic contributions to campus life. </p>
                 
-                <p> Mirchandani is now pursuing a master's degree at the Manhattan School of Music as a winner of the President's Award scholarship. He is a former pupil of Solomon Mikowsky and currently studies with Jeffrey Cohen.</p>
+                <p> In 2021, Mirchandani completed his master's degree at the Manhattan School of Music, where he was a winner of the President's Award scholarship. He was a pupil of Jeffrey Cohen and Solomon Mikowsky. Currently, Mirchandani is pursuing a Professional Studies Diploma at the Mannes School of Music as a student of Thomas Sauer.</p>
             </div>
         )
     }
