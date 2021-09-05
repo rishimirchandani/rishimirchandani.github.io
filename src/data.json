@@ -37,6 +37,20 @@
                 "tag": "dun"
             },
             {
+                "type": "youtube",
+                "heading": "Beethoven: Sonata No. 28 in A Major, Op. 101",
+                "subheading": null,
+                "id": "hi7uwnsllfQ",
+                "tag": "beethoven-101"
+            },
+            {
+                "type": "youtube",
+                "heading": "Schumann: Humoreske in B-flat Major, Op. 20: IV. Innig",
+                "subheading": null,
+                "id": "pJO4kt4k30U",
+                "tag": "schumann-innig"
+            },
+            {
                 "type": "spotify-playlist",
                 "heading": "Galbraith: Three Preludes for Piano (Centaur Records)",
                 "subheading": null,

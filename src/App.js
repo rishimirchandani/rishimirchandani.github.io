@@ -7,9 +7,11 @@ import Media from './components/Media'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Wide from './components/Wide'
+import { Mixpanel } from './Mixpanel'
 import './App.css';
 
 function App() {
+  Mixpanel.track('home');
   return (
       <div className="App">
           <Navbar />
