@@ -10,13 +10,6 @@
         "clips": [
             {
                 "type": "youtube",
-                "heading": "Ravel: Piano Concerto in G, Pittsburgh Symphony Orchestra — excerpt",
-                "subheading": null,
-                "id": "wolM_AUS9Ls",
-                "tag": "ravel"
-            },
-            {
-                "type": "youtube",
                 "heading": "Stravinsky: Piano-Rag-Music",
                 "subheading": null,
                 "id": "w0mmoTdv2wY",
@@ -24,17 +17,24 @@
             },
             {
                 "type": "youtube",
-                "heading": "Chopin: Polonaise-Fantasie in A-flat Major, Op. 61",
+                "heading": "Brahms: Fantasies Op. 116, Nos. 4-7",
                 "subheading": null,
-                "id": "6VglqOW8IGk",
-                "tag": "chopin"
+                "id": "KbUsDTjsvVo",
+                "tag": "brahms"
+            },
+            {
+                "type": "spotify",
+                "heading": "Interview on WQED-FM Pittsburgh",
+                "subheading": null,
+                "id": "episode/6mh4fkKWMlBZ93bJ56FCIK",
+                "tag": "wqed"
             },
             {
                 "type": "youtube",
-                "heading": "Dun: Eight Memories in Watercolor",
+                "heading": "Ravel: Piano Concerto in G, Pittsburgh Symphony Orchestra — excerpt",
                 "subheading": null,
-                "id": "Ul_OigRJreA",
-                "tag": "dun"
+                "id": "wolM_AUS9Ls",
+                "tag": "ravel"
             },
             {
                 "type": "youtube",
@@ -51,10 +51,10 @@
                 "tag": "haydn-variations"
             },
             {
-                "type": "spotify-playlist",
+                "type": "spotify",
                 "heading": "Galbraith: Three Preludes for Piano (Centaur Records)",
                 "subheading": null,
-                "id": "58o4UQJKEBzhpgVPVSrP6q",
+                "id": "playlist/58o4UQJKEBzhpgVPVSrP6q",
                 "tag": "preludes"
             },
             {

@@ -18,13 +18,13 @@ class Media extends React.Component {
                             </div>
                         );
                     }
-                    else if (clip.type === "spotify-playlist") {
+                    else if (clip.type === "spotify") {
                         return (
                             <div>
                                 <i class="Anchor" id={clip.tag}></i>
                                 <h3>{clip.heading}</h3>
                                 <p>{clip.subheading}</p>
-                                <iframe class="Spotify" title={clip.id} src={`https://open.spotify.com/embed/playlist/${clip.id}`} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                <iframe class="Spotify" title={clip.id} src={`https://open.spotify.com/embed/${clip.id}`} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                             </div>
                         )
                     }
