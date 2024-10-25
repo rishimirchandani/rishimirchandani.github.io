@@ -10,17 +10,17 @@
         "clips": [
             {
                 "type": "youtube",
+                "heading": "Lukas Foss: Fantasy Rondo for Piano",
+                "subheading": null,
+                "id": "yFJVoA-x8cw",
+                "tag": "foss"
+            },
+            {
+                "type": "youtube",
                 "heading": "Stravinsky: Piano-Rag-Music",
                 "subheading": null,
                 "id": "w0mmoTdv2wY",
                 "tag": "stravinsky"
-            },
-            {
-                "type": "youtube",
-                "heading": "Brahms: Fantasies Op. 116, Nos. 4-7",
-                "subheading": null,
-                "id": "KbUsDTjsvVo",
-                "tag": "brahms"
             },
             {
                 "type": "spotify",
@@ -38,17 +38,10 @@
             },
             {
                 "type": "youtube",
-                "heading": "Chopin: Prelude in E Minor, Op. 28, No. 4",
+                "heading": "Brahms: Fantasies Op. 116, Nos. 4-7",
                 "subheading": null,
-                "id": "LkMBN1yv7wc",
-                "tag": "chopin-prelude-4"
-            },
-            {
-                "type": "youtube",
-                "heading": "Haydn: Andante and Variations in F Minor, Hob. XVI:6",
-                "subheading": null,
-                "id": "gn5YqDHMu8g",
-                "tag": "haydn-variations"
+                "id": "KbUsDTjsvVo",
+                "tag": "brahms"
             },
             {
                 "type": "spotify",
