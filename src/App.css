@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
 
 html {
     scroll-behavior: smooth;
 }
 
 .App {
-    font-family: 'Work Sans';
+    font-family: 'Cardo';
     background-color:black;
     color: #cec390;
     /* color:#ffe7b0; */
