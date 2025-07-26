@@ -15,7 +15,7 @@ function App() {
   return (
       <div className="App">
           <Navbar />
-          <Hero src="/hero.png"/>
+          <Hero src="/hero.png" credit="Photo: Titilayo Ayangade" />
           <Quotes />
           <About />
           <Media />

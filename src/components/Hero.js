@@ -19,6 +19,9 @@ class Hero extends React.Component {
         return (
             <div id="home" class="Hero">
                 <img alt="" src={this.props.src}></img>
+                <div className="photo-credit">
+                    {this.props.credit}
+                </div>
             </div>
         );
     }

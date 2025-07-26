@@ -14,8 +14,8 @@ class About extends React.Component {
                 <p>Mirchandani subsequently moved to New York to focus on music professionally. He completed his master's degree in piano at the Manhattan School of Music with Jeffrey Cohen and Solomon Mikowsky, sponsored as a winner of the President’s Award. He then earned a Professional Studies Diploma at the Mannes School of Music, where he studied with Thomas Sauer and won the coveted Steinway Award for artistic excellence and service to Mannes. Mirchandani quickly became a New York audience favourite as a soloist, chamber musician, and song pianist, receiving invitations to appear at Carnegie Hall, the Bohemian National Hall, the German Consulate of the U.N., the Union Club, Klavierhaus, and many other renowned venues in the city.</p>
             
                 <img alt="" src="/middle.png"></img>
-            
-                <p>Now based in London, Mirchandani is currently pursuing an Artist Diploma at the Royal College of Music. He is a student of Dmitri Alexeev, Ian Jones, and Andrew Zolinsky. He receives sponsorship from the institution as an RCM Scholar.</p>
+                        
+                <p>Now based in London, Mirchandani recently completed his Artist Diploma at the Royal College of Music. He is a student of Dmitri Alexeev, Ian Jones, and Andrew Zolinsky. He received sponsorship from the institution as an RCM Scholar.</p>
             
                 <p>He has received additional guidance from <a href="#langlang">Lang Lang</a>, Richard Goode, Boris Berman, Robert McDonald, and Eldar Nebolsin. Mirchandani's recording of Nancy Galbraith's Three Preludes for Piano was featured on the acclaimed Centaur Records album <i>Strange Travels</i>, which garnered a spot on the "Want List" in <i>Fanfare Magazine</i>.</p>
             
