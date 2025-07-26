@@ -15,7 +15,7 @@ class About extends React.Component {
             
                 <img alt="" src="/middle.png"></img>
                         
-                <p>Now based in London, Mirchandani recently completed his Artist Diploma at the Royal College of Music. He is a student of Dmitri Alexeev, Ian Jones, and Andrew Zolinsky. He received sponsorship from the institution as an RCM Scholar.</p>
+                <p>Now based in London, Mirchandani recently completed his Artist Diploma at the Royal College of Music. He was a student of Dmitri Alexeev, Ian Jones, and Andrew Zolinsky. He received sponsorship from the institution as an RCM Scholar.</p>
             
                 <p>He has received additional guidance from <a href="#langlang">Lang Lang</a>, Richard Goode, Boris Berman, Robert McDonald, and Eldar Nebolsin. Mirchandani's recording of Nancy Galbraith's Three Preludes for Piano was featured on the acclaimed Centaur Records album <i>Strange Travels</i>, which garnered a spot on the "Want List" in <i>Fanfare Magazine</i>.</p>
             

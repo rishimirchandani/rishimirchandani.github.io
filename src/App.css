@@ -289,13 +289,14 @@ input, textarea {
     }
     .Navbar-top {
         left: 0em;
+        padding-left: 10%;
     }
     .Nav-top {
-        margin-left:2.5em;
+        margin-left:1.7em;
     }
     .Nav-top li {
         display: inline-block;
-        padding-right: 1em;
+/*        padding-right: 1em;*/
     }
     .Title {
     	font-size: 2em;
@@ -325,14 +326,14 @@ input, textarea {
         font-size: 0.75em;
     }
     .Nav-top {
-        margin-left:2em;
+        margin-left:1.5em;
     }
     .Nav li {
         display: block;
     }
     .Nav-top li {
         display: inline-block;
-        padding-right: 1em;
+/*        padding-right: 1em;*/
     }
     .Video, .Spotify, .MP3 {
         width: 20em;
