@@ -4,6 +4,92 @@
 
         "bio": ""
     },
+    "events": {
+        "_comment": "There are 4 types of clips that are supported: youtube, spotify-playlist, mp3, and video. id defines the source of the clip, and should be set as follows.  For youtube, whatever comes after v= in the URL. For spotify-playlist, the URI (right click playlist to get this). For mp3, place the entire public Google Drive link (it should end with /preview).",
+
+        "concerts": [
+            {
+                "date": "3–7 Nov",
+                "time": "8:40am",
+                "title": "'Morning Calm' Recitals",
+                "venue": "St. George Hanover Square",
+                "city": "London, UK",
+                "tickets": "https://www.eventbrite.co.uk/e/morning-calm-rishi-mirchandani-tickets-1659669489119"
+            },
+            {
+                "date": "20 Nov",
+                "time": "5pm",
+                "title": "Faculty Recital",
+                "venue": "Charterhouse School",
+                "city": "Surrey, UK"
+            },
+            {
+                "date": "23 Nov",
+                "time": "10am",
+                "title": "'Classical Coffee Morning' Recital",
+                "venue": "Elgar Room, Royal Albert Hall",
+                "city": "London, UK",
+                "tickets": "https://www.royalalberthall.com/tickets/events/2025/classical-coffee-mornings-rishi-mirchandani"
+            },
+            {
+                "date": "25 Nov",
+                "time": "1:10pm",
+                "title": "Recital",
+                "venue": "Wesley Memorial Church, Oxford Concert Circle",
+                "city": "Oxford, UK"
+            },
+            {
+                "date": "3 Dec",
+                "time": "1:10pm",
+                "title": "Recital",
+                "venue": "St. James Piccadilly",
+                "city": "London, UK",
+                "info": "https://www.sjp.org.uk/whats-on/rishi-mirchandani-piano/"
+            },
+            {
+                "date": "14 Jan",
+                "time": "1pm",
+                "title": "Recital",
+                "venue": "Downing Place Church",
+                "city": "Cambridge, UK"
+            },
+            {
+                "date": "21 Jan",
+                "time": "12:30pm",
+                "title": "Recital",
+                "venue": "St. Botolph without Aldgate",
+                "city": "London, UK"
+            },
+            {
+                "date": "29 Jan",
+                "time": "1pm",
+                "title": "Recital",
+                "venue": "University Church",
+                "city": "Oxford, UK"
+            },
+            {
+                "date": "11 Feb",
+                "time": "1:15pm",
+                "title": "Recital",
+                "venue": "St. Dunstan in the West",
+                "city": "London, UK"
+            },
+            {
+                "date": "17 Feb",
+                "time": "1:30pm",
+                "title": "Recital",
+                "venue": "St. Michael's Highgate",
+                "city": "London, UK"
+            },
+            {
+                "date": "10 May",
+                "time": "3pm",
+                "title": "Recital",
+                "venue": "St. Michael's Church",
+                "city": "Bray, UK"
+            }
+        ]
+    },
     "media": {
         "_comment": "There are 4 types of clips that are supported: youtube, spotify-playlist, mp3, and video. id defines the source of the clip, and should be set as follows.  For youtube, whatever comes after v= in the URL. For spotify-playlist, the URI (right click playlist to get this). For mp3, place the entire public Google Drive link (it should end with /preview).",
 

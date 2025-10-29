@@ -1,6 +1,6 @@
 import React from 'react';
 
-const navItems = ["home", "about", "media", "contact"];
+const navItems = ["home", "about", "concerts", "media", "contact"];
 const navList = navItems.map((navItem)=> 
     <li><a href={`#${navItem}`}>{navItem}</a></li>
 );

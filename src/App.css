@@ -191,6 +191,7 @@ h2 {
 
 .About h2 {
     padding-top: 2.5em;
+    padding-bottom: .25em;
 }
 
 .About p {
@@ -204,8 +205,56 @@ h2 {
     width: 20%
 }
 
+.Events {
+    background-color: rgba(255,255,255,0.09);
+}
+
+.Events h2 {
+    padding-top: 2.5em;
+    padding-bottom: 1em;
+}
+
+/* Events table styling: left-aligned columns, spacing, zebra rows, responsive */
+.Section.Events .container {
+    /* keep surrounding content centered on larger sections, but left-align table contents */
+    text-align: left;
+    overflow-x: auto; /* allow horizontal scroll on small screens */
+}
+
+.Section.Events .events-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 360px; 
+    margin-top: 1em;
+    font-size: 0.98rem;
+}
+
+.Section.Events .events-table th,
+.Section.Events .events-table td {
+    text-align: left; /* left align all columns */
+    padding: 0.4em 0.5em;
+    vertical-align: top;
+}
+
+.Section.Events .events-table td:first-child {
+    white-space: nowrap; /* keep date/time together */
+    width: 1%;
+}
+
+.Section.Events .events-table td:nth-child(3) {
+    width: auto;
+}
+
+.Section.Events .events-table td:last-child {
+    white-space: nowrap;
+}
+
 .Media {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255,255,255,0.11);
+}
+
+.Media h2 {
+    padding-top: 2.5em;
 }
 
 h3 {

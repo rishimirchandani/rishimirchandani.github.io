@@ -20,23 +20,6 @@ class About extends React.Component {
                 <p>He has received additional guidance from <a href="#langlang">Lang Lang</a>, Richard Goode, Boris Berman, Robert McDonald, and Eldar Nebolsin. Mirchandani's recording of Nancy Galbraith's Three Preludes for Piano was featured on the acclaimed Centaur Records album <i>Strange Travels</i>, which garnered a spot on the "Want List" in <i>Fanfare Magazine</i>.</p>
             
                 <p>A native of Pittsburgh, Mirchandani studied as a child with Luz Manr&#237;quez. Now a committed teacher himself, Mirchandani joined the teaching staff of the U.K.'s renowned Charterhouse School in September 2025 and also maintains a successful private studio. His students routinely receive top honours in exams and competitions, including invitations to perform in Carnegie Hall. He previously taught undergraduate piano proficiency at the Mannes School of Music and served as a Teaching Artist for <a href="https://www.midoriandfriends.org/">Midori & Friends</a>. In 2024, he gave a masterclass as a guest artist at the Carnegie Mellon University Preparatory School of Music. He believes earnestly in music’s ability to help human beings discover their inner power, natural grace, and shared humanity.</p>
-            
-                <b>Upcoming concerts:</b>
-                <ul>
-                    <li>3-7 Nov, 8:40am: &apos;Morning Calm&apos; recitals at St. George Hanover Square, London [<a href="https://www.eventbrite.co.uk/e/morning-calm-rishi-mirchandani-tickets-1659669489119">tickets</a>]</li>
-                    <li>20 Nov, 5pm: Faculty Recital at Charterhouse School, Surrey</li>
-                    <li>23 Nov, 10am: &apos;Classical Coffee Morning&apos; recital at Elgar Room, Royal Albert Hall, London [<a href="https://www.royalalberthall.com/tickets/events/2025/classical-coffee-mornings-rishi-mirchandani">tickets</a>]</li>
-                    <li>25 Nov, 1:10pm: Recital at Wesley Memorial Church (Oxford Concert Circle), Oxford </li>
-                    <li>3 Dec, 1:10pm: Recital at St. James Piccadilly, London [<a href="https://www.sjp.org.uk/whats-on/rishi-mirchandani-piano/">more info</a>]</li>
-                    <li>14 Jan, 1pm: Recital at Downing Place Church, Cambridge</li>
-                    <li>21 Jan, 12:30pm: Recital at St. Botolph without Aldgate, London</li>
-                    <li>29 Jan, 1pm: Recital at University Church, Oxford</li>
-                    <li>11 Feb, 1:15pm: Recital at St. Dunstan in the West, London</li>
-                    <li>17 Feb, 1:30pm: Recital at St. Michael's Highgate, London</li>
-                    <li>10 May, 3pm: Recital at St. Michael's Church, Bray</li>
-                </ul>
-            
-            
 
 
             </div>
