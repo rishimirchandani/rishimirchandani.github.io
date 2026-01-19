@@ -5,8 +5,8 @@ import Quotes from '../components/Quotes';
 function AboutPage() {
     return (
         <>
-            <About />
             <Quotes />
+            <About />
         </>
     );
 }
