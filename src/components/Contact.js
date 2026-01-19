@@ -5,7 +5,9 @@ class Contact extends React.Component {
         return (
             <div className="Section Contact">
                 <h2>Contact</h2>
+                <center>
                 <p>For booking or private lesson inquiries, please email <a href="mailto:hello@rishimirchandani.com">hello@rishimirchandani.com</a> or use the form below.</p>
+                </center>
                 <form action="" method="POST">
                     <input type="text" name="name" placeholder="Name" />
                     <input type="text" name="Email" placeholder="Email" />

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Quotes from '../components/Quotes';
 
 class About extends React.Component {
     render() {
         return (
             <div className="Section About">
-                <h2></h2>
+                <Quotes />
+                <div className="quotes-separator"></div>
                 <div className="about-content">
                     <div className="about-images">
                         <img alt="" src="/front.png"></img>

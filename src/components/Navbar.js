@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
     { path: "/", label: "home" },
-    { path: "/about", label: "about" },
+    { path: "/bio", label: "bio" },
     { path: "/concerts", label: "concerts" },
     { path: "/media", label: "media" },
     { path: "/contact", label: "contact" }

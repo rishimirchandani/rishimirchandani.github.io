@@ -1,7 +1,58 @@
 /* ============================================
    FONTS
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+
+/* ============================================
+   CSS VARIABLES - COLORS
+   ============================================ */
+:root {
+    
+    /* Background Colors */
+    --bg-app: rgb(230, 230, 230);
+    --bg-transparent: rgb(0, 0, 0, 0);
+    --bg-navbar-top: rgb(0, 0, 0, 0.9);
+    --bg-navbar-home-start: rgba(0, 0, 0, 0.5);
+    --bg-navbar-home-end: rgba(0, 0, 0, 0);
+    --bg-about: rgba(255, 255, 255, 0.07);
+    --bg-events: rgba(255, 255, 255, 0.09);
+    --bg-media: rgba(255, 255, 255, 0.11);
+    --bg-input: white;
+    --bg-submit: rgb(255, 255, 255);
+    --bg-date-box: rgba(255, 255, 255, 0.5);
+    --bg-quotes: rgba(255, 255, 255, 0);
+    --bg-event-link: rgba(0, 0, 0, 0.8);
+    --bg-event-link-hover: rgba(0, 0, 0, 0.9);
+    
+    /* Text Colors */
+    --text-primary: rgb(0, 0, 0);
+    --text-navbar: black;
+    --text-navbar-top: rgb(180, 185, 189);
+    --text-photo-credit: rgb(142, 142, 142);
+    --text-link-hover: rgba(0, 0, 0, 0.8);
+    --text-date-month: rgba(0, 0, 0, 0.7);
+    --text-date-day: rgba(0, 0, 0, 0.9);
+    --text-date-time: rgba(0, 0, 0, 0.6);
+    --text-event-title: rgba(0, 0, 0, 0.9);
+    --text-event-location: rgba(0, 0, 0, 0.7);
+    --text-event-link: white;
+    --text-footer: rgba(255, 255, 255, 0.5);
+    --text-input: rgba(0, 0, 0, 1);
+    
+    /* Border Colors */
+    --border-link: #000000;
+    --border-h3: grey;
+    --border-date-box: rgba(0, 0, 0, 0.3);
+    --border-separator: rgba(0, 0, 0, 0.2);
+    
+    /* Opacity Values */
+    --opacity-section-text: 0.9;
+    --opacity-nav: 0.8;
+    --opacity-hero-top: 0.5;
+    --opacity-past-event: 0.6;
+    --opacity-text-shadow: 0.8;
+}
 
 /* ============================================
    GLOBAL STYLES
@@ -10,12 +61,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--bg-app);
+}
+
 .App {
-    font-family: 'Josefin Sans';
+    font-family: 'Outfit';
     font-weight: 400;
     letter-spacing: -0.03em;
-    background-color: rgb(166, 167, 168);
-    color: rgb(0, 0, 0);
+    color: var(--text-primary);
     line-height: 1.5em;
 }
 
@@ -28,24 +82,39 @@ h2 {
     font-size: 2em;
     font-family: 'Optima';
     margin: 0;
+    text-align: center;
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: var(--border-separator);
 }
 
 h3 {
     /* margin-top: 4em; */
     font-weight: 300;
     padding-bottom: 1em;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--border-h3);
 }
 
 a {
-    color: #000000;
-    border-bottom: 1.5px dotted #000000;
+    color: var(--border-link);
+    border-bottom: 1.5px dotted var(--border-link);
     text-decoration: none;
     transition: color .4s ease-in-out;
 }
 
 a:hover {
-    color: rgb(0,0,0,0.8);
+    color: var(--text-link-hover);
 }
 
 /* ============================================
@@ -57,43 +126,43 @@ a:hover {
     text-align: right;
     top: 10vh;
     right: 5%;
-    color: black;
-    background-color: rgb(0,0,0,0);
+    color: var(--text-navbar);
+    background-color: var(--bg-transparent);
     z-index: 1;
 }
 
 .Navbar a {
-    color: black;
+    color: var(--text-navbar);
     transition: color 0s ease-in-out;
 }
 
 .Navbar a:active {
-    color: black;
+    color: var(--text-navbar);
 }
 
 .Navbar-top {
     text-align: left;
     top: 0em;
     left: 0em;
-    color: rgb(180, 185, 189);
-    padding-left: 10%;
+    color: var(--text-navbar-top);
+    padding-left: 18%;
     padding-top: 1em;
     width: 100%;
     position: fixed;
-    background-color: rgb(0,0,0,0.9);
+    background-color: var(--bg-navbar-top);
 }
 
 .Navbar-top.Navbar-top-home {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    background: linear-gradient(to bottom, var(--bg-navbar-home-start), var(--bg-navbar-home-end));
     padding-bottom: 2.5em;
 }
 
 .Navbar-top a {
-    color: rgb(180, 185, 189);
+    color: var(--text-navbar-top);
 }
 
 .Navbar-top a:active {
-    color: rgb(180, 185, 189);
+    color: var(--text-navbar-top);
 }
 
 .Title {
@@ -114,7 +183,7 @@ a:hover {
 }
 
 .Nav {
-    opacity: 0.8;
+    opacity: var(--opacity-nav);
     font-size: 1.2em;
     text-transform: lowercase;
 }
@@ -177,31 +246,44 @@ a:hover {
 }
 
 .Hero-top {
-    opacity: .5;
+    opacity: var(--opacity-hero-top);
 }
 
 .photo-credit {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    color: rgb(142, 142, 142);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    color: var(--text-photo-credit);
+    text-shadow: 1px 1px 2px rgba(0,0,0,var(--opacity-text-shadow));
     font-size: 0.65rem;
 }
 
 /* ============================================
    SECTIONS
    ============================================ */
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0.5;
+        transform: translateY(-0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .Section {
     display: block;
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 64%;
+    padding-top: 10em;
+    padding-left: 18%;
+    padding-right: 18%;
     padding-bottom: 4em;
+    animation: fadeInFromTop 0.6s ease-out;
 }
 
 .Section p {
-    opacity: .9;
+    opacity: var(--opacity-section-text);
 }
 
 .Section img {
@@ -212,24 +294,19 @@ a:hover {
    ABOUT PAGE
    ============================================ */
 .About {
-    background-color: rgba(255,255,255,0.07);
-}
-
-.About h2 {
-    padding-top: 5.5em;
-    padding-bottom: .25em;
+    background-color: var(--bg-about);
 }
 
 .about-content {
     display: flex;
-    gap: 2em;
+    gap: 3em;
     align-items: flex-start;
 }
 
 .about-images {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 3em;
     flex-shrink: 0;
 }
 
@@ -246,19 +323,15 @@ a:hover {
 .About p {
     width: 100%;
     padding-left: 0;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 /* ============================================
    EVENTS PAGE
    ============================================ */
 .Events {
-    background-color: rgba(255,255,255,0.09);
-}
-
-.Events h2 {
-    padding-top: 5.5em;
-    padding-bottom: 1em;
+    background-color: var(--bg-events);
 }
 
 .events-container {
@@ -275,13 +348,13 @@ a:hover {
 }
 
 .event-card.past-event {
-    opacity: 0.6;
+    opacity: var(--opacity-past-event);
 }
 
 .events-separator {
     width: 100%;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--border-separator);
     margin: 2em 0;
     border: none;
 }
@@ -289,12 +362,12 @@ a:hover {
 .date-box {
     min-width: 100px;
     width: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-date-box);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0.2em 0.2em;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-date-box);
 }
 
 .date-month {
@@ -303,7 +376,7 @@ a:hover {
     letter-spacing: 0.05em;
     font-weight: 500;
     margin-bottom: 0.3em;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--text-date-month);
 }
 
 .date-day {
@@ -311,13 +384,13 @@ a:hover {
     font-weight: bold;
     line-height: 1;
     margin: 0.2em 0;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--text-date-day);
 }
 
 .date-time {
     font-size: 0.7em;
     margin-top: 0.4em;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-date-time);
     text-align: center;
 }
 
@@ -338,7 +411,7 @@ a:hover {
     border: none !important;
     border-bottom: none !important;
     line-height: 1.4;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--text-event-title);
     opacity: 1;
 }
 
@@ -351,7 +424,7 @@ a:hover {
 
 .event-location {
     font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--text-event-location);
     font-family: 'Courier New', monospace;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -364,8 +437,8 @@ a:hover {
 .event-link {
     display: inline-block;
     padding: 0.6em 1.2em;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: var(--bg-event-link);
+    color: var(--text-event-link);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.85em;
@@ -375,18 +448,14 @@ a:hover {
 }
 
 .event-link:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--bg-event-link-hover);
 }
 
 /* ============================================
    MEDIA PAGE
    ============================================ */
 .Media {
-    background-color: rgba(255,255,255,0.11);
-}
-
-.Media h2 {
-    padding-top: 5.5em;
+    background-color: var(--bg-media);
 }
 
 .media-container {
@@ -430,37 +499,47 @@ a:hover {
 /* ============================================
    CONTACT PAGE
    ============================================ */
-.Contact h2 {
-    padding-top: 5.5em;
-    padding-bottom: .25em;
-}
 
 .container {
     text-align: center;
 }
 
+.Contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: 2em auto 0;
+}
+
 input, textarea {
-    width: 80%;
-    padding: 0.5em;
-    background-color: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.5);
+    width: 100%;
+    background-color: var(--bg-input);
+    color: var(--text-input);
     margin-top: 2em;
-    font-family: 'Work Sans', sans-serif;
+    padding: 1em;
+    font-family: 'Outfit', sans-serif;
     border: none;
 }
 
+textarea {
+    height: 8em;
+}
+
 #submit {
-    background-color: rgba(255,255,255,0.08);
+    background-color: var(--bg-submit);
+    cursor: pointer;
+    width: auto;
+    padding: 1em 2em;
 }
 
 /* ============================================
    QUOTES
    ============================================ */
 .Quotes {
-    padding-top: .5em;
     padding-bottom: 0em;
     text-align: center;
-    background-color: rgba(255,255,255,0);
+    background-color: var(--bg-quotes);
 }
 
 .Quotes .quote {
@@ -474,6 +553,14 @@ input, textarea {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding-bottom: 1em;
+}
+
+.quotes-separator {
+    width: 100px;
+    height: 1px;
+    background-color: var(--border-separator);
+    margin: 3em auto;
+    border: none;
 }
 
 /* ============================================
@@ -498,7 +585,7 @@ input, textarea {
    ============================================ */
 .Footer {
     text-align: center;
-    color: rgba(255,255,255,0.5);
+    color: var(--text-footer);
     text-transform: uppercase;
     padding-top: 1em;
     padding-bottom: 1em;
