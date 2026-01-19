@@ -5,8 +5,8 @@ class Media extends React.Component {
     render() {
         return (
             <div className="Section Media">
-                <h2 id="media">Media</h2>
-                <div class="container">
+                <h2>Media</h2>
+                <div className="media-container">
                 {data.media.clips.map( (clip) => {
                     if (clip.type === "youtube") {
                         return (

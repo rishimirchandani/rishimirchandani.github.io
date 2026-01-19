@@ -1,30 +1,47 @@
 import React from 'react';
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import About from './components/About'
-import Quotes from './components/Quotes'
-import Media from './components/Media'
-import Events from './components/Events'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Wide from './components/Wide'
-import { Mixpanel } from './Mixpanel'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ConcertsPage from './pages/ConcertsPage';
+import MediaPage from './pages/MediaPage';
+import ContactPage from './pages/ContactPage';
+import { Mixpanel } from './Mixpanel';
 import './App.css';
 
 function App() {
-  Mixpanel.track('home');
   return (
-      <div className="App">
-          <Navbar />
-          <Hero src="/hero.png" credit="Photo: Titilayo Ayangade" />
-          <Quotes />
-          <About />
-          <Events />
-          <Media />
-          <Wide src="/pan.png"/>
-          <Contact />
-          <Footer />
-      </div>
+      <Router>
+          <ScrollToTop />
+          <div className="App">
+              <Navbar />
+              <Switch>
+                  <Route exact path="/" component={() => {
+                      Mixpanel.track('home');
+                      return <HomePage />;
+                  }} />
+                  <Route path="/about" component={() => {
+                      Mixpanel.track('about');
+                      return <AboutPage />;
+                  }} />
+                  <Route path="/concerts" component={() => {
+                      Mixpanel.track('concerts');
+                      return <ConcertsPage />;
+                  }} />
+                  <Route path="/media" component={() => {
+                      Mixpanel.track('media');
+                      return <MediaPage />;
+                  }} />
+                  <Route path="/contact" component={() => {
+                      Mixpanel.track('contact');
+                      return <ContactPage />;
+                  }} />
+              </Switch>
+              <Footer />
+          </div>
+      </Router>
   );
 }
 

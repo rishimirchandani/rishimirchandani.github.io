@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 html {
@@ -7,9 +8,13 @@ html {
 }
 
 .App {
-    font-family: 'Cardo';
-    background-color:black;
-    color: #cec390;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    /* background-color:black; */
+    background-color: rgb(166, 167, 168);
+    /* color: #cec390; */
+    color: rgb(0, 0, 0);
     /* color:#ffe7b0; */
     /* color: #ebc96b; */
     line-height: 1.5em;
@@ -26,6 +31,10 @@ html {
     object-fit: cover;
 }
 
+.Hero-top {
+    opacity: .5;
+}
+
 .photo-credit {
     position: absolute;
     bottom: 10px;
@@ -35,9 +44,6 @@ html {
     font-size: 0.65rem;
 }
 
-.Hero-top {
-    opacity: .5;
-}
 
 .Wide img {
     width: 100%;
@@ -68,6 +74,11 @@ html {
     font-size:3em;
     letter-spacing: 0.08em;
     font-family: 'Optima';
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit;
+    display: block;
 }
 
 .Nav {
@@ -80,14 +91,17 @@ html {
     text-align: left;
     top: 0em;
     left: 0em;
-    color: #cec390;
-    padding-left: 25%;
+    /* color: #cec390; */
+    color:rgb(180, 185, 189);
+    padding-left: 10%;
     padding-top: .5em;
     width: 100%;
     position: fixed;
     background-color: rgb(0,0,0,0.9);
-    a{color:#cec390;;}
-    a:active{color:#cec390;;}
+    /* a{color:#cec390;;} */
+    a{color:rgb(180, 185, 189);;}
+    /* a:active{color:#cec390;;} */
+    a:active{color:rgb(180, 185, 189);;}
 }
 
 .Title-top {
@@ -95,7 +109,7 @@ html {
 }
 
 .Nav-top {
-    margin-left: 5em;
+    margin-left: 30%;
     display: inline-block;
 }
 
@@ -111,7 +125,7 @@ html {
 
 .Nav li {
     display: inline-block;
-    padding-left:1.7em;
+    padding-left:2em;
     letter-spacing: 0.03em;
 }
 
@@ -135,7 +149,7 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: rgb(255,255,255,0.5);
 }
 
 .Anchor {
@@ -156,9 +170,9 @@ h2 {
 
 .Section {
     display: block;
-    width: 50%;
-    padding-left: 25%;
-    padding-right: 25%;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 4em;
 }
 
@@ -190,19 +204,37 @@ h2 {
 }
 
 .About h2 {
-    padding-top: 2.5em;
+    padding-top: 5.5em;
     padding-bottom: .25em;
 }
 
-.About p {
-    width:55%
+.about-content {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    flex-shrink: 0;
 }
 
 .About img {
-    position: absolute;
-    padding-left: 30%;
-    display: inline-block;
-    width: 20%
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.About p {
+    width: 100%;
+    padding-left: 0;
+    font-size: 1.1em;
 }
 
 .Events {
@@ -210,47 +242,126 @@ h2 {
 }
 
 .Events h2 {
-    padding-top: 2.5em;
+    padding-top: 5.5em;
     padding-bottom: 1em;
 }
 
-/* Events table styling: left-aligned columns, spacing, zebra rows, responsive */
-.Section.Events .container {
-    /* keep surrounding content centered on larger sections, but left-align table contents */
-    text-align: left;
-    overflow-x: auto; /* allow horizontal scroll on small screens */
+/* Events card styling with date boxes */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-top: 2em;
 }
 
-.Section.Events .events-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 360px; 
-    margin-top: 1em;
-    font-size: 0.98rem;
+.event-card {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
 }
 
-.Section.Events .events-table th,
-.Section.Events .events-table td {
-    text-align: left; /* left align all columns */
-    padding: 0.4em 0.5em;
-    vertical-align: top;
-}
-
-.Section.Events .events-table td:first-child {
-    white-space: nowrap; /* keep date/time together */
-    width: 1%;
-}
-
-.Section.Events .events-table td:nth-child(3) {
-    width: auto;
-}
-
-.Section.Events .events-table td:last-child {
-    white-space: nowrap;
-}
-
-.Section.Events .events-table tr.past-event {
+.event-card.past-event {
     opacity: 0.6;
+}
+
+.events-separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2em 0;
+    border: none;
+}
+
+.date-box {
+    min-width: 100px;
+    width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2em 0.2em;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.date-month {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.date-day {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0.2em 0;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.date-time {
+    font-size: 0.7em;
+    margin-top: 0.4em;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.event-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.event-title {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+    border: none !important;
+    border-bottom: none !important;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+}
+
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 0.3em;
+}
+
+.event-location {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.event-links {
+    margin-top: 0.5em;
+}
+
+.event-link {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.event-link:hover {
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .Media {
@@ -258,7 +369,35 @@ h2 {
 }
 
 .Media h2 {
-    padding-top: 2.5em;
+    padding-top: 5.5em;
+}
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+    margin-top: 2em;
+}
+
+.media-container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.media-container h3 {
+    margin-top: 0;
+}
+
+.media-container .Video,
+.media-container .Spotify,
+.media-container .MP3 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.Contact h2 {
+    padding-top: 5.5em;
+    padding-bottom: .25em;
 }
 
 h3 {
@@ -311,14 +450,19 @@ input, textarea {
 }
 
 
-@media screen and (min-width: 961px) and (max-width: 1320px) {
+/* @media screen and (min-width: 961px) and (max-width: 1320px) {
     .Section {
         padding-left:20%;
-        width: 60%;
+        width: 80%;
         padding-right:20%;
     }
-    .About img {
-        padding-left: 38%;
+    .about-content {
+        flex-direction: column;
+    }
+    .about-images {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
     .Navbar-top {
         padding-left: 20%;
@@ -337,8 +481,13 @@ input, textarea {
         width: 80%;
         padding-right:10%;
     }
-    .About img {
-        padding-left: 50%;
+    .about-content {
+        flex-direction: column;
+    }
+    .about-images {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
     .Navbar {
         left:40%; 
@@ -369,8 +518,13 @@ input, textarea {
     .About p {
         width: 100%;
     }
-    .About img {
-        display: none;
+    .about-content {
+        flex-direction: column;
+    }
+    .about-images {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     .Navbar {
         left: 25%;
@@ -388,7 +542,20 @@ input, textarea {
     }
     .Nav-top li {
         display: inline-block;
-/*        padding-right: 1em;*/
+    }
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+    .date-box {
+        min-width: 80px;
+        width: 80px;
+        padding: 0.6em 0.4em;
+    }
+    .date-day {
+        font-size: 1.6em;
+    }
+    .event-card {
+        gap: 1.5em;
     }
     .Video, .Spotify, .MP3 {
         width: 20em;
@@ -413,8 +580,13 @@ input, textarea {
     .About p {
         width: 100%;
     }
-    .About img {
-        display: none;
+    .about-content {
+        flex-direction: column;
+    }
+    .about-images {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     .Navbar {
         left: 25%;
@@ -428,6 +600,29 @@ input, textarea {
         margin: 0;
         padding: 0;
         line-height: 1em;
+    }
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+    .date-box {
+        min-width: 70px;
+        width: 70px;
+        padding: 0.5em 0.3em;
+    }
+    .date-day {
+        font-size: 1.4em;
+    }
+    .date-month {
+        font-size: 0.65em;
+    }
+    .date-time {
+        font-size: 0.6em;
+    }
+    .event-card {
+        gap: 1em;
+    }
+    .event-title {
+        font-size: 1em;
     }
     .Title-top {
         margin-bottom: 0;
@@ -451,4 +646,4 @@ input, textarea {
     .Title-top {
 		font-size: 1.2em;
 	}
-}
+} */
