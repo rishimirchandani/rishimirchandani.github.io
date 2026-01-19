@@ -20,52 +20,34 @@ function Navbar() {
         
         if (!navbar || !nav || !title) return;
         
-        // On non-home pages, always show navbar in top position
-        if (!isHomePage) {
+        if (isHomePage) {
             navbar.classList.add("Navbar-top");
             nav.classList.add("Nav-top");
             title.classList.add("Title-top");
-            return;
+            navbar.classList.add("Navbar-top-home");
         }
         else {
-            navbar.classList.remove("Navbar-top");
-            nav.classList.remove("Nav-top");
-            title.classList.remove("Title-top");
+            navbar.classList.remove("Navbar-top-home");
+            navbar.classList.add("Navbar-top");
+            nav.classList.add("Nav-top");
+            title.classList.add("Title-top");
         }
         
-        // On home page, use scroll-based behavior
-        const resizeOnScroll = () => {
-            // const distY = window.pageYOffset || document.documentElement.scrollTop;
-            // const shrinkY = 380;
-            // if (distY > shrinkY) {
-            //     navbar.classList.add("Navbar-top");
-            //     nav.classList.add("Nav-top");
-            //     title.classList.add("Title-top");
-            //     navbar.style.opacity = 1;
-            // }
-            // else if (distY > shrinkY - 300) {
-            //     navbar.style.opacity = 0.5;
-            // }
-            // else {
-            //     navbar.style.opacity = 1;
-            //     navbar.classList.remove("Navbar-top");
-            //     nav.classList.remove("Nav-top");
-            //     title.classList.remove("Title-top");           
-            // }
-        };
-        
-        // Set initial state for home page
-        resizeOnScroll();
-        
-        window.addEventListener("scroll", resizeOnScroll);
-        return () => window.removeEventListener("scroll", resizeOnScroll);
     }, [location.pathname, isHomePage]);
     
-    const navList = navItems.map((navItem, index) => (
-        <li key={index}>
-            <Link to={navItem.path}>{navItem.label}</Link>
-        </li>
-    ));
+    const navList = navItems.map((navItem, index) => {
+        const isActive = location.pathname === navItem.path;
+        return (
+            <li key={index}>
+                <Link 
+                    to={navItem.path} 
+                    className={isActive ? 'nav-link active' : 'nav-link'}
+                >
+                    {navItem.label}
+                </Link>
+            </li>
+        );
+    });
     
     return (
         <div className="Navbar">
