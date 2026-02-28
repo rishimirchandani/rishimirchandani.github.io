@@ -20,8 +20,8 @@ function MediaPage() {
     
     return (
         <>
+            <Wide src="/log.png" title="Media" offset={40} />
             <Media />
-            <Wide src="/pan.png" />
         </>
     );
 }

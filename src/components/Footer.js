@@ -3,8 +3,8 @@ import React from 'react';
 class Footer extends React.Component {
     render() {
         return (
-            <div class="Section Footer">
-                <p>Copyright &#169;2025 Rishi Mirchandani </p>
+            <div className="Section Footer">
+                <p>&#169; 2026 Rishi Mirchandani </p>
             </div>
         )
     }

@@ -1,18 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Quotes from '../components/Quotes';
 
 class About extends React.Component {
     render() {
         return (
             <div className="Section About">
-                <Quotes />
-                <div className="quotes-separator"></div>
                 <div className="about-content">
-                    <div className="about-images">
-                        <img alt="" src="/front.png"></img>
-                        <img alt="" src="/middle.png"></img>
-                    </div>
                     <div className="about-text">
                         <p> After amassing six gold medals in major national and international competitions, Indian-American pianist Rishi Mirchandani <Link to="/media#ravel">debuted</Link> as soloist with the Grammy award-winning Pittsburgh Symphony Orchestra at the age of 18. He made his first of four appearances at Carnegie Hall in New York at age 12, and he has performed to critical acclaim in England, Germany, Italy, Portugal, Spain, and the United States.</p>
                     

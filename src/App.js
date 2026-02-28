@@ -17,7 +17,7 @@ function AppContent() {
   return (
     <div className="App">
       <Navbar />
-      <Switch location={location} key={location.pathname}>
+      <Switch location={location}>
         <Route exact path="/" component={() => {
           Mixpanel.track('home');
           return <HomePage />;

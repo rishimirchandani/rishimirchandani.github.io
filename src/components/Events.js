@@ -115,13 +115,13 @@ class Events extends React.Component {
 
         return (
             <div className="Section Events">
-                <h2>Events 2025-26</h2>
+                {/* <h2>Events 2025-26</h2> */}
                 <div className="events-container">
-                    {upcomingEvents.map((event, index) => renderEvent(event, `upcoming-${index}`))}
-                    {pastEvents.length > 0 && upcomingEvents.length > 0 && (
-                        <div className="events-separator"></div>
-                    )}
                     {pastEvents.map((event, index) => renderEvent(event, `past-${index}`))}
+                    {upcomingEvents.map((event, index) => renderEvent(event, `upcoming-${index}`))}
+                    {/* {pastEvents.length > 0 && upcomingEvents.length > 0 && (
+                        <div className="events-separator"></div>
+                    )} */}
                 </div>
             </div>
         )

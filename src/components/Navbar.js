@@ -12,28 +12,80 @@ const navItems = [
 function Navbar() {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
+    const [isScrolled, setIsScrolled] = React.useState(false);
+    const locationPathRef = React.useRef(location.pathname);
     
+    // Update location ref whenever it changes
     React.useEffect(() => {
-        const navbar = document.getElementsByClassName("Navbar")[0];
-        const nav = document.getElementsByClassName("Nav")[0];
-        const title = document.getElementsByClassName("Title")[0];
+        locationPathRef.current = location.pathname;
+        setIsScrolled(false); // Reset scroll state on route change
+    }, [location.pathname]);
+    
+    // Build className strings based on state
+    const navbarClassName = `Navbar Navbar-top ${isHomePage ? 'Navbar-top-home' : ''} ${isScrolled ? 'Navbar-scrolled' : ''}`.trim();
+    const navClassName = "Nav Nav-top";
+    const titleClassName = "Title Title-top";
+    
+    // Scroll handling - separate effect that doesn't interfere with navigation
+    React.useEffect(() => {
+        let ticking = false;
+        let isMounted = true;
         
-        if (!navbar || !nav || !title) return;
+        // Scroll handler to detect when past first image
+        const handleScroll = () => {
+            if (!isMounted || ticking) return;
+            
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                if (!isMounted) {
+                    ticking = false;
+                    return;
+                }
+                
+                try {
+                    // Get current path from ref (always latest value)
+                    const currentPath = locationPathRef.current;
+                    const currentIsHomePage = currentPath === "/";
+                    
+                    // Find the first image (Hero on home page, Wide on other pages)
+                    const firstImage = currentIsHomePage 
+                        ? document.querySelector('.Hero')
+                        : document.querySelector('.Wide');
+                    
+                    // Only proceed if the image element exists and has valid dimensions
+                    if (firstImage && firstImage.offsetHeight > 0) {
+                        const imageBottom = firstImage.offsetTop + firstImage.offsetHeight - 150;
+                        const scrollY = window.scrollY || window.pageYOffset;
+                        
+                        // Update state instead of manipulating DOM directly
+                        setIsScrolled(scrollY > imageBottom);
+                    }
+                } catch (error) {
+                    // Silently fail to prevent breaking the component
+                    console.error('Navbar scroll handler error:', error);
+                }
+                ticking = false;
+            });
+        };
         
-        if (isHomePage) {
-            navbar.classList.add("Navbar-top");
-            nav.classList.add("Nav-top");
-            title.classList.add("Title-top");
-            navbar.classList.add("Navbar-top-home");
-        }
-        else {
-            navbar.classList.remove("Navbar-top-home");
-            navbar.classList.add("Navbar-top");
-            nav.classList.add("Nav-top");
-            title.classList.add("Title-top");
-        }
+        // Initial check after a delay to ensure DOM is ready
+        const timeoutId = setTimeout(() => {
+            if (isMounted) {
+                handleScroll();
+            }
+        }, 300);
         
-    }, [location.pathname, isHomePage]);
+        // Add scroll listener
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Cleanup
+        return () => {
+            isMounted = false;
+            clearTimeout(timeoutId);
+            window.removeEventListener('scroll', handleScroll);
+        };
+        
+    }, []); // Only run once on mount - use refs for current values
     
     const navList = navItems.map((navItem, index) => {
         const isActive = location.pathname === navItem.path;
@@ -50,11 +102,11 @@ function Navbar() {
     });
     
     return (
-        <div className="Navbar">
-            <Link to="/" className="Title">
+        <div className={navbarClassName}>
+            <Link to="/" className={titleClassName}>
                 Rishi Mirchandani
             </Link>
-            <div className='Nav'>
+            <div className={navClassName}>
                 <ul id='nav'>
                     {navList}
                 </ul>

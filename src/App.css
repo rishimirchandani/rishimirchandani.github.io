@@ -10,25 +10,29 @@
 :root {
     
     /* Background Colors */
-    --bg-app: rgb(230, 230, 230);
+    --bg-app: rgb(0, 0, 0);
     --bg-transparent: rgb(0, 0, 0, 0);
-    --bg-navbar-top: rgb(0, 0, 0, 0.9);
-    --bg-navbar-home-start: rgba(0, 0, 0, 0.5);
+    --bg-navbar-start: rgba(0, 0, 0, 0.6);
+    --bg-navbar-end: rgba(0, 0, 0, 0);
+    --bg-navbar-scrolled: rgba(0, 0, 0, 0.95);
+    --bg-navbar-home-start: rgba(0, 0, 0, 0.9);
     --bg-navbar-home-end: rgba(0, 0, 0, 0);
-    --bg-about: rgba(255, 255, 255, 0.07);
-    --bg-events: rgba(255, 255, 255, 0.09);
-    --bg-media: rgba(255, 255, 255, 0.11);
+    --bg-about: rgba(255, 255, 255, 0.9);
+    --bg-events: rgba(255, 255, 255, 0.9);
+    --bg-media: rgba(255, 255, 255, 0.9);
+    --bg-contact: rgba(255, 255, 255, 0.9);
     --bg-input: white;
     --bg-submit: rgb(255, 255, 255);
     --bg-date-box: rgba(255, 255, 255, 0.5);
     --bg-quotes: rgba(255, 255, 255, 0);
-    --bg-event-link: rgba(0, 0, 0, 0.8);
-    --bg-event-link-hover: rgba(0, 0, 0, 0.9);
+    --bg-event-link: rgba(0, 0, 0, 0);
+    --bg-event-link-hover: rgba(0, 0, 0, 0);
     
     /* Text Colors */
     --text-primary: rgb(0, 0, 0);
+    --text-bio: rgb(255, 255, 255, 0.9);
     --text-navbar: black;
-    --text-navbar-top: rgb(180, 185, 189);
+    --text-navbar-top: rgb(255, 255, 255);
     --text-photo-credit: rgb(142, 142, 142);
     --text-link-hover: rgba(0, 0, 0, 0.8);
     --text-date-month: rgba(0, 0, 0, 0.7);
@@ -36,9 +40,11 @@
     --text-date-time: rgba(0, 0, 0, 0.6);
     --text-event-title: rgba(0, 0, 0, 0.9);
     --text-event-location: rgba(0, 0, 0, 0.7);
-    --text-event-link: white;
+    --text-event-link: rgba(0, 0, 0, 0.7);
     --text-footer: rgba(255, 255, 255, 0.5);
     --text-input: rgba(0, 0, 0, 1);
+    --text-quotes: rgba(255, 255, 255, 0.7);
+    --text-quoted: rgba(255, 255, 255, 0.5);
     
     /* Border Colors */
     --border-link: #000000;
@@ -52,6 +58,11 @@
     --opacity-hero-top: 0.5;
     --opacity-past-event: 0.6;
     --opacity-text-shadow: 0.8;
+    
+    /* Font Families */
+    --font-primary: 'Outfit', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-monospace: 'Courier New', monospace;
 }
 
 /* ============================================
@@ -66,7 +77,7 @@ body {
 }
 
 .App {
-    font-family: 'Outfit';
+    font-family: var(--font-primary);
     font-weight: 400;
     letter-spacing: -0.03em;
     color: var(--text-primary);
@@ -80,7 +91,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 2em;
-    font-family: 'Optima';
+    font-family: var(--font-heading);
     margin: 0;
     text-align: center;
     position: relative;
@@ -141,24 +152,56 @@ a:hover {
 }
 
 .Navbar-top {
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0em;
     left: 0em;
     color: var(--text-navbar-top);
-    padding-left: 18%;
     padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
     position: fixed;
-    background-color: var(--bg-navbar-top);
+    background: linear-gradient(to bottom, var(--bg-navbar-start), var(--bg-navbar-end));
+    padding-bottom: 1.5em;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
-.Navbar-top.Navbar-top-home {
+.Navbar-top-home {
     background: linear-gradient(to bottom, var(--bg-navbar-home-start), var(--bg-navbar-home-end));
-    padding-bottom: 2.5em;
 }
+
+.Navbar-top > * {
+    margin: 0 12em;
+    transition: all 0.3s ease-in-out;
+}
+
+.Navbar-scrolled {
+    background: linear-gradient(to bottom, var(--bg-navbar-scrolled), var(--bg-navbar-scrolled));
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+/* .Navbar-scrolled > * {
+    margin: 0 4em !important;
+} */
+/* 
+.Navbar-scrolled .Title-top {
+    font-size: 1.2em !important;
+}
+
+.Navbar-scrolled .Nav-top {
+    font-size: 1em !important;
+} */
+
 
 .Navbar-top a {
     color: var(--text-navbar-top);
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .Navbar-top a:active {
@@ -169,7 +212,7 @@ a:hover {
     text-transform: uppercase;
     font-size: 3em;
     letter-spacing: 0.08em;
-    font-family: 'Optima';
+    font-family: var(--font-heading);
     font-weight: bold;
     text-decoration: none;
     border-bottom: none;
@@ -180,12 +223,14 @@ a:hover {
 .Title-top {
     display: inline-block;
     font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .Nav {
     opacity: var(--opacity-nav);
     font-size: 1.2em;
     text-transform: lowercase;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .Nav ul {
@@ -219,6 +264,7 @@ a:hover {
     height: 1px;
     background-color: currentColor;
     transition: width 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .nav-link:hover::after,
@@ -227,7 +273,7 @@ a:hover {
 }
 
 .Nav-top {
-    margin-left: 30%;
+    margin-left: 0;
     display: inline-block;
 }
 
@@ -239,10 +285,18 @@ a:hover {
     transition: opacity 1s ease-in-out;
 }
 
-.Hero img {
+.Hero {
+    position: relative;
     height: 100vh;
+    overflow: hidden;
+}
+
+.Hero img {
+    height: 130vh;
     width: 100%;
     object-fit: cover;
+    object-position: center -15%;
+    transform: translateY(-5%);
 }
 
 .Hero-top {
@@ -275,7 +329,7 @@ a:hover {
 .Section {
     display: block;
     width: 64%;
-    padding-top: 10em;
+    padding-top: 7em;
     padding-left: 18%;
     padding-right: 18%;
     padding-bottom: 4em;
@@ -299,25 +353,13 @@ a:hover {
 
 .about-content {
     display: flex;
-    gap: 3em;
-    align-items: flex-start;
-}
-
-.about-images {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    flex-shrink: 0;
-}
-
-.About img {
-    display: block;
-    width: 100%;
-    max-width: 300px;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-text {
-    flex: 1;
+    max-width: 800px;
+    text-align: center;
 }
 
 .About p {
@@ -325,6 +367,7 @@ a:hover {
     padding-left: 0;
     font-size: 1.2em;
     line-height: 1.5em;
+    text-align: left;
 }
 
 /* ============================================
@@ -360,9 +403,10 @@ a:hover {
 }
 
 .date-box {
-    min-width: 100px;
-    width: 100px;
+    min-width: 80px;
+    width: 80px;
     border: 1px solid var(--border-date-box);
+    /* border-radius: 10%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -375,15 +419,15 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 500;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.1em;
     color: var(--text-date-month);
 }
 
 .date-day {
-    font-size: 2em;
+    font-size: 1.2em;
     font-weight: bold;
     line-height: 1;
-    margin: 0.2em 0;
+    margin: 0.1em 0;
     color: var(--text-date-day);
 }
 
@@ -423,28 +467,26 @@ a:hover {
 }
 
 .event-location {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: var(--text-event-location);
-    font-family: 'Courier New', monospace;
+    /* font-family: var(--font-monospace); */
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
-.event-links {
-    margin-top: 0.5em;
-}
 
 .event-link {
     display: inline-block;
-    padding: 0.6em 1.2em;
+    /* padding: 0.6em 1.2em; */
     background-color: var(--bg-event-link);
     color: var(--text-event-link);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.85em;
+    font-size: 0.8em;
     letter-spacing: 0.05em;
     border-radius: 3px;
     transition: background-color 0.2s;
+    border-bottom: none;
 }
 
 .event-link:hover {
@@ -484,6 +526,7 @@ a:hover {
 .Video {
     width: 35em;
     height: 19em;
+    border-radius: 0.7em;
 }
 
 .Spotify {
@@ -504,6 +547,10 @@ a:hover {
     text-align: center;
 }
 
+.Contact {
+    background-color: var(--bg-contact);
+}
+
 .Contact form {
     display: flex;
     flex-direction: column;
@@ -518,7 +565,7 @@ input, textarea {
     color: var(--text-input);
     margin-top: 2em;
     padding: 1em;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-primary);
     border: none;
 }
 
@@ -536,23 +583,48 @@ textarea {
 /* ============================================
    QUOTES
    ============================================ */
+.Hero .Quotes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3em 2em;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8em;
+}
+
 .Quotes {
     padding-bottom: 0em;
     text-align: center;
     background-color: var(--bg-quotes);
 }
 
+.quote-item {
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+}
+
 .Quotes .quote {
     font-style: italic;
-    font-size: 1.5em;
-    font-family: 'Optima';
-    margin-bottom: 0;
+    font-size: 1.1em;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5em;
+    color: var(--text-quotes);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
 }
 
 .Quotes .quoted {
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding-bottom: 1em;
+    padding-bottom: 0;
+    font-size: 0.85em;
+    color: var(--text-quoted);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .quotes-separator {
@@ -564,10 +636,112 @@ textarea {
 }
 
 /* ============================================
+   BIO SECTION (Home Page)
+   ============================================ */
+.BioSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bio-image {
+    width: 115%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.bio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4em;
+    padding-left: 18%;
+}
+
+.bio-content {
+    max-width: 400px;
+    text-align: left;
+    color: var(--text-bio);
+}
+
+.bio-text {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin-bottom: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bio-link {
+    display: inline-block;
+    padding: 0.8em 2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+}
+
+.bio-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ============================================
    WIDE COMPONENT
    ============================================ */
+.Wide {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    max-height: 65vh;
+    overflow: hidden;
+}
+
 .Wide img {
     width: 100%;
+    height: 120%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.wide-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3em 0em;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.wide-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3em;
+    font-family: var(--font-heading);
+    color: white;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ============================================
@@ -594,7 +768,7 @@ textarea {
 /* ============================================
    RESPONSIVE STYLES
    ============================================ */
-@media screen and (min-width: 493px) and (max-width: 736px) {
+/* @media screen and (min-width: 493px) and (max-width: 736px) {
     .Section {
         padding-left: 10%;
         width: 80%;
@@ -609,24 +783,22 @@ textarea {
         flex-direction: column;
     }
     
-    .about-images {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
     .Navbar {
         left: 25%;
     }
     
     .Navbar-top {
-        padding-left: 2em;
+        padding-left: 0;
         left: 0em;
         font-size: 0.75em;
     }
     
+    .Navbar-top > * {
+        margin: 0 1em;
+    }
+    
     .Nav-top {
-        margin-left: 1.5em;
+        margin-left: 0;
     }
     
     .Nav li {
@@ -670,9 +842,9 @@ textarea {
     .Title-top {
         font-size: 1.3em;
     }
-}
+} */
 
-@media screen and (max-width: 492px) {
+/* @media screen and (max-width: 492px) {
     .Section {
         padding-left: 10%;
         width: 80%;
@@ -685,12 +857,6 @@ textarea {
     
     .about-content {
         flex-direction: column;
-    }
-    
-    .about-images {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
     }
     
     .Navbar {
@@ -766,5 +932,5 @@ textarea {
     
     .Title-top {
         font-size: 1.2em;
-    }
-}
+    } 
+} */
