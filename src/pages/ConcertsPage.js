@@ -5,7 +5,7 @@ import Wide from '../components/Wide';
 function ConcertsPage() {
     return (
         <>
-            <Wide src="/carnegie2_cool.jpg" title="Concerts" />
+            <Wide src="/carnegie2_cool.jpg" title="Concerts 2025-2026" />
             <Events />
         </>
     );

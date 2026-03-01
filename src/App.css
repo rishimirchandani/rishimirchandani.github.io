@@ -12,11 +12,11 @@
     /* Background Colors */
     --bg-app: rgb(0, 0, 0);
     --bg-transparent: rgb(0, 0, 0, 0);
-    --bg-navbar-start: rgba(0, 0, 0, 0.6);
-    --bg-navbar-end: rgba(0, 0, 0, 0);
     --bg-navbar-scrolled: rgba(0, 0, 0, 0.95);
+    --bg-navbar-start: rgba(0, 0, 0, 0.7);
+    --bg-navbar-end: rgba(0, 0, 0, 0.0);
     --bg-navbar-home-start: rgba(0, 0, 0, 0.9);
-    --bg-navbar-home-end: rgba(0, 0, 0, 0);
+    --bg-navbar-home-end: rgba(0, 0, 0, 0.0);
     --bg-about: rgba(255, 255, 255, 0.9);
     --bg-events: rgba(255, 255, 255, 0.9);
     --bg-media: rgba(255, 255, 255, 0.9);
@@ -113,7 +113,7 @@ h2::after {
 h3 {
     /* margin-top: 4em; */
     font-weight: 300;
-    padding-bottom: 1em;
+    padding-bottom: 0.6em;
     border-bottom: 1px solid var(--border-h3);
 }
 
@@ -131,41 +131,18 @@ a:hover {
 /* ============================================
    NAVBAR
    ============================================ */
-.Navbar {
-    display: block;
-    position: absolute;
-    text-align: right;
-    top: 10vh;
-    right: 5%;
-    color: var(--text-navbar);
-    background-color: var(--bg-transparent);
-    z-index: 1;
-}
-
-.Navbar a {
-    color: var(--text-navbar);
-    transition: color 0s ease-in-out;
-}
-
-.Navbar a:active {
-    color: var(--text-navbar);
-}
 
 .Navbar-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0em;
-    left: 0em;
     color: var(--text-navbar-top);
+    background: linear-gradient(to bottom, var(--bg-navbar-start), var(--bg-navbar-end));
     padding-top: 1em;
-    padding-left: 0;
-    padding-right: 0;
     width: 100%;
     position: fixed;
-    background: linear-gradient(to bottom, var(--bg-navbar-start), var(--bg-navbar-end));
     padding-bottom: 1.5em;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 1000;
     pointer-events: auto;
 }
@@ -174,29 +151,15 @@ a:hover {
     background: linear-gradient(to bottom, var(--bg-navbar-home-start), var(--bg-navbar-home-end));
 }
 
-.Navbar-top > * {
-    margin: 0 12em;
+/* .Navbar-top > * {
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .Navbar-scrolled {
     background: linear-gradient(to bottom, var(--bg-navbar-scrolled), var(--bg-navbar-scrolled));
     padding-top: 0.1em !important;
     padding-bottom: 0.1em !important;
 }
-
-/* .Navbar-scrolled > * {
-    margin: 0 4em !important;
-} */
-/* 
-.Navbar-scrolled .Title-top {
-    font-size: 1.2em !important;
-}
-
-.Navbar-scrolled .Nav-top {
-    font-size: 1em !important;
-} */
-
 
 .Navbar-top a {
     color: var(--text-navbar-top);
@@ -208,21 +171,15 @@ a:hover {
     color: var(--text-navbar-top);
 }
 
-.Title {
-    text-transform: uppercase;
-    font-size: 3em;
-    letter-spacing: 0.08em;
-    font-family: var(--font-heading);
+.Title-top {
+    padding-right: 12em;
     font-weight: bold;
     text-decoration: none;
     border-bottom: none;
-    color: inherit;
-    display: block;
-}
-
-.Title-top {
-    display: inline-block;
-    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-heading);
+    font-size: 1.8em;
     transition: font-size 0.3s ease-in-out;
 }
 
@@ -295,7 +252,6 @@ a:hover {
     height: 130vh;
     width: 100%;
     object-fit: cover;
-    object-position: center -15%;
     transform: translateY(-5%);
 }
 
@@ -310,6 +266,7 @@ a:hover {
     color: var(--text-photo-credit);
     text-shadow: 1px 1px 2px rgba(0,0,0,var(--opacity-text-shadow));
     font-size: 0.65rem;
+    z-index: 10;
 }
 
 /* ============================================
@@ -329,7 +286,7 @@ a:hover {
 .Section {
     display: block;
     width: 64%;
-    padding-top: 7em;
+    padding-top: 6em;
     padding-left: 18%;
     padding-right: 18%;
     padding-bottom: 4em;
@@ -382,6 +339,8 @@ a:hover {
     flex-direction: column;
     gap: 2.5em;
     margin-top: 2em;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .event-card {
@@ -504,7 +463,6 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3em;
-    margin-top: 2em;
 }
 
 .media-container > div {
@@ -525,13 +483,13 @@ a:hover {
 
 .Video {
     width: 35em;
-    height: 19em;
+    height: 22em;
     border-radius: 0.7em;
 }
 
 .Spotify {
     width: 35em;
-    height: 14em;
+    height: 22em;
 }
 
 .MP3 {
@@ -555,8 +513,14 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 70%;
+    max-width: 800px;
     margin: 2em auto 0;
+    font-size: 1rem;
+}
+
+.Contact form input,
+.Contact form textarea {
+    font-size: 1rem;
 }
 
 input, textarea {
@@ -571,6 +535,10 @@ input, textarea {
 
 textarea {
     height: 8em;
+}
+
+.Contact #submit {
+    font-size: 1rem;
 }
 
 #submit {
@@ -663,7 +631,7 @@ textarea {
     align-items: center;
     justify-content: flex-start;
     padding: 4em;
-    padding-left: 18%;
+    padding-left: 20%;
 }
 
 .bio-content {
@@ -768,169 +736,120 @@ textarea {
 /* ============================================
    RESPONSIVE STYLES
    ============================================ */
-/* @media screen and (min-width: 493px) and (max-width: 736px) {
-    .Section {
-        padding-left: 10%;
-        width: 80%;
-        padding-right: 10%;
-    }
-    
-    .About p {
-        width: 100%;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .Navbar {
-        left: 25%;
-    }
-    
-    .Navbar-top {
-        padding-left: 0;
-        left: 0em;
-        font-size: 0.75em;
-    }
-    
-    .Navbar-top > * {
-        margin: 0 1em;
-    }
-    
-    .Nav-top {
-        margin-left: 0;
-    }
-    
-    .Nav li {
-        display: block;
-    }
-    
-    .Nav-top li {
-        display: inline-block;
-    }
-    
-    .media-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .date-box {
-        min-width: 80px;
-        width: 80px;
-        padding: 0.6em 0.4em;
-    }
-    
-    .date-day {
-        font-size: 1.6em;
-    }
-    
-    .event-card {
-        gap: 1.5em;
-    }
-    
-    .Video, .Spotify, .MP3 {
-        width: 20em;
-    }
-    
-    .Video, .Spotify {
-        height: 13em;
-    }
-    
-    .Title {
-        font-size: 1.7em;
-    }
-    
+   @media screen and (max-width: 1920px) {
     .Title-top {
-        font-size: 1.3em;
+        padding-right: 6em;
     }
-} */
+    .Hero .Quotes {
+        gap: 4em;
+    }
+   }
+   @media screen and (max-width: 1420px) {
+    .Title-top {
+        padding-right: 4em;
+    }
+    .Hero .Quotes {
+        gap: 2em;
+    }
+   }
 
-/* @media screen and (max-width: 492px) {
-    .Section {
-        padding-left: 10%;
-        width: 80%;
-        padding-right: 10%;
-    }
-    
-    .About p {
-        width: 100%;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .Navbar {
-        left: 25%;
-    }
-    
-    .Navbar-top {
-        padding-left: 2em;
-        left: 0em;
-        font-size: 0.75em;
-    }
-    
-    .Nav-top {
-        margin: 0;
-        padding: 0;
-        line-height: 1em;
-    }
-    
-    .media-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .date-box {
-        min-width: 70px;
-        width: 70px;
-        padding: 0.5em 0.3em;
-    }
-    
-    .date-day {
-        font-size: 1.4em;
-    }
-    
-    .date-month {
-        font-size: 0.65em;
-    }
-    
-    .date-time {
-        font-size: 0.6em;
-    }
-    
-    .event-card {
-        gap: 1em;
-    }
-    
-    .event-title {
-        font-size: 1em;
-    }
-    
+   @media screen and (max-width: 1080px) {
     .Title-top {
-        margin-bottom: 0;
+        font-size: 1.5em;
     }
-    
+    .Nav {
+        font-size: 1.1em;
+    }
+    .Hero .quote-item {
+        display: none;
+    }
+    .bio-image {
+        width: 100%;
+        object-position: top center;
+        /* transform: translateX(-10%); */
+    }
+    .bio-overlay {
+        padding: 0em;
+        padding-left: 18%;
+    }
+    .bio-content {
+        max-width: 64%;
+        text-align: center;
+        color: var(--text-bio);
+    }
+   }
+   @media screen and (max-width: 960px) {
+    .Navbar-top {
+        flex-direction: column;
+        align-items: center;
+    }
     .Nav li {
-        display: block;
-    }
-    
-    .Nav-top li {
-        display: inline-block;
+        padding-left: 1em;
         padding-right: 1em;
     }
-    
-    .Video, .Spotify, .MP3 {
-        width: 20em;
-    }
-    
-    .Video, .Spotify {
-        height: 13em;
-    }
-    
-    .Title {
-        font-size: 1.7em;
-    }
-    
     .Title-top {
-        font-size: 1.2em;
-    } 
-} */
+        padding-top: 1em;
+        padding-right: 0;
+    }
+    .Wide {
+        height: 55vh;
+    }
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+    .media-container .Video {
+        height: 18em;
+    }
+    .media-container .Spotify {
+        height: 18em;
+    }
+    .media-container .MP3 {
+        height: 3em;
+    }
+    .wide-title {
+        font-size: 1.6em;
+    }
+    .Section {
+        width: 72%;
+        padding-top: 3em;
+        padding-left: 14%;
+        padding-right: 14%;
+        padding-bottom: 3em;
+        animation: fadeInFromTop 0.6s ease-out;
+    }
+   }
+   @media screen and (max-width: 720px) {
+    .Hero img {
+        height: 100vh;
+        transform: none;
+    }
+   }
+   @media screen and (max-width: 540px) {
+    .Nav {
+        font-size: 1em;
+    }
+    .bio-text {
+        font-size: 1em;
+    }
+    .bio-overlay {
+        padding-left: 10%;
+    }
+    .bio-content {
+        max-width: 80%;
+    }
+   }
+   @media screen and (max-width: 480px) {
+    .Nav {
+        font-size: 0.9em;
+    }
+    .Nav li {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+   }
+   @media screen and (max-width: 360px) {
+    .Nav li {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+   }
