@@ -4,10 +4,10 @@ import Wide from '../components/Wide';
 
 function ContactPage() {
     return (
-        <>
-            <Wide src="/blue2.jpg" title="Contact" offset={30} />
+        <div className="ContactPage">
+            <Wide src="/blue2.jpg" title="Contact" offset={30} credit="Photo: Titilayo Ayangade" />
             <Contact />
-        </>
+        </div>
     );
 }
 

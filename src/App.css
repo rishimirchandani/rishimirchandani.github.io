@@ -33,7 +33,7 @@
     --text-bio: rgb(255, 255, 255, 0.9);
     --text-navbar: black;
     --text-navbar-top: rgb(255, 255, 255);
-    --text-photo-credit: rgb(142, 142, 142);
+    --text-photo-credit: rgb(255, 255, 255, 0.4);
     --text-link-hover: rgba(0, 0, 0, 0.8);
     --text-date-month: rgba(0, 0, 0, 0.7);
     --text-date-day: rgba(0, 0, 0, 0.9);
@@ -63,6 +63,31 @@
     --font-primary: 'Outfit', sans-serif;
     --font-heading: 'Outfit', sans-serif;
     --font-monospace: 'Courier New', monospace;
+
+    /* Font Sizes */
+    --font-size-h2: 2em;
+    --font-size-navbar-title: 1.8em;
+    --font-size-nav: 1.2em;
+    --font-size-photo-credit: 0.7rem;
+    --font-size-body-large: 1.2em;
+    --font-size-date-month: 0.8em;
+    --font-size-date-day: 1.2em;
+    --font-size-date-time: 0.8em;
+    --font-size-event-title: 1.2em;
+    --font-size-event-meta: 0.8em;
+    --font-size-form: 1em;
+    --font-size-quote: 1.1em;
+    --font-size-quoted: 0.85em;
+    --font-size-bio-text: 1.2em;
+    --font-size-bio-link: 0.9em;
+    --font-size-wide-title: 3em;
+    /* Responsive overrides */
+    --font-size-navbar-title-sm: 1.6em;
+    --font-size-nav-sm: 1.1em;
+    --font-size-wide-title-sm: 1.6em;
+    --font-size-nav-xs: 1em;
+    --font-size-bio-text-sm: 1em;
+    --font-size-nav-xxs: 0.9em;
 }
 
 /* ============================================
@@ -90,7 +115,7 @@ body {
 h2 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 2em;
+    font-size: var(--font-size-h2);
     font-family: var(--font-heading);
     margin: 0;
     text-align: center;
@@ -179,13 +204,13 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-family: var(--font-heading);
-    font-size: 1.8em;
+    font-size: var(--font-size-navbar-title);
     transition: font-size 0.3s ease-in-out;
 }
 
 .Nav {
     opacity: var(--opacity-nav);
-    font-size: 1.2em;
+    font-size: var(--font-size-nav);
     text-transform: lowercase;
     transition: font-size 0.3s ease-in-out;
 }
@@ -265,7 +290,7 @@ a:hover {
     right: 10px;
     color: var(--text-photo-credit);
     text-shadow: 1px 1px 2px rgba(0,0,0,var(--opacity-text-shadow));
-    font-size: 0.65rem;
+    font-size: var(--font-size-photo-credit);
     z-index: 10;
 }
 
@@ -322,7 +347,7 @@ a:hover {
 .About p {
     width: 100%;
     padding-left: 0;
-    font-size: 1.2em;
+    font-size: var(--font-size-body-large);
     line-height: 1.5em;
     text-align: left;
 }
@@ -374,7 +399,7 @@ a:hover {
 }
 
 .date-month {
-    font-size: 0.75em;
+    font-size: var(--font-size-date-month);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 500;
@@ -383,7 +408,7 @@ a:hover {
 }
 
 .date-day {
-    font-size: 1.2em;
+    font-size: var(--font-size-date-day);
     font-weight: bold;
     line-height: 1;
     margin: 0.1em 0;
@@ -391,7 +416,7 @@ a:hover {
 }
 
 .date-time {
-    font-size: 0.7em;
+    font-size: var(--font-size-date-time);
     margin-top: 0.4em;
     color: var(--text-date-time);
     text-align: center;
@@ -405,7 +430,7 @@ a:hover {
 }
 
 .event-title {
-    font-size: 1.1em;
+    font-size: var(--font-size-event-title);
     font-weight: 400;
     margin: 0 !important;
     margin-top: 0 !important;
@@ -426,7 +451,7 @@ a:hover {
 }
 
 .event-location {
-    font-size: 0.8em;
+    font-size: var(--font-size-event-meta);
     color: var(--text-event-location);
     /* font-family: var(--font-monospace); */
     text-transform: uppercase;
@@ -441,7 +466,7 @@ a:hover {
     color: var(--text-event-link);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: var(--font-size-event-meta);
     letter-spacing: 0.05em;
     border-radius: 3px;
     transition: background-color 0.2s;
@@ -515,12 +540,12 @@ a:hover {
     align-items: center;
     max-width: 800px;
     margin: 2em auto 0;
-    font-size: 1rem;
+    font-size: var(--font-size-form);
 }
 
 .Contact form input,
 .Contact form textarea {
-    font-size: 1rem;
+    font-size: var(--font-size-form);
 }
 
 input, textarea {
@@ -538,7 +563,7 @@ textarea {
 }
 
 .Contact #submit {
-    font-size: 1rem;
+    font-size: var(--font-size-form);
 }
 
 #submit {
@@ -578,7 +603,7 @@ textarea {
 
 .Quotes .quote {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: var(--font-size-quote);
     font-family: var(--font-heading);
     margin-bottom: 0.5em;
     color: var(--text-quotes);
@@ -590,7 +615,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding-bottom: 0;
-    font-size: 0.85em;
+    font-size: var(--font-size-quoted);
     color: var(--text-quoted);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
@@ -641,7 +666,7 @@ textarea {
 }
 
 .bio-text {
-    font-size: 1.2em;
+    font-size: var(--font-size-bio-text);
     line-height: 1.8em;
     margin-bottom: 2em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -657,7 +682,7 @@ textarea {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.9em;
+    font-size: var(--font-size-bio-link);
 }
 
 .bio-link:hover {
@@ -704,7 +729,7 @@ textarea {
 .wide-title {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 3em;
+    font-size: var(--font-size-wide-title);
     font-family: var(--font-heading);
     color: white;
     margin: 0;
@@ -755,10 +780,10 @@ textarea {
 
    @media screen and (max-width: 1080px) {
     .Title-top {
-        font-size: 1.5em;
+        font-size: var(--font-size-navbar-title-sm);
     }
     .Nav {
-        font-size: 1.1em;
+        font-size: var(--font-size-nav-sm);
     }
     .Hero .quote-item {
         display: none;
@@ -766,7 +791,6 @@ textarea {
     .bio-image {
         width: 100%;
         object-position: top center;
-        /* transform: translateX(-10%); */
     }
     .bio-overlay {
         padding: 0em;
@@ -792,7 +816,19 @@ textarea {
         padding-right: 0;
     }
     .Wide {
-        height: 55vh;
+        height: 40vh;
+    }
+    .AboutPage .Wide img {
+        height: 58vh;
+    }
+    .ContactPage .Wide img {
+        height: 72vh;
+    }
+    .ConcertsPage .Wide img {
+        height: 45vh;
+    }
+    .MediaPage .Wide img {
+        height: 56vh;
     }
     .media-container {
         grid-template-columns: 1fr;
@@ -807,7 +843,7 @@ textarea {
         height: 3em;
     }
     .wide-title {
-        font-size: 1.6em;
+        font-size: var(--font-size-wide-title-sm);
     }
     .Section {
         width: 72%;
@@ -826,10 +862,10 @@ textarea {
    }
    @media screen and (max-width: 540px) {
     .Nav {
-        font-size: 1em;
+        font-size: var(--font-size-nav-xs);
     }
     .bio-text {
-        font-size: 1em;
+        font-size: var(--font-size-bio-text-sm);
     }
     .bio-overlay {
         padding-left: 10%;
@@ -840,7 +876,7 @@ textarea {
    }
    @media screen and (max-width: 480px) {
     .Nav {
-        font-size: 0.9em;
+        font-size: var(--font-size-nav-xxs);
     }
     .Nav li {
         padding-left: 0.8em;
@@ -851,5 +887,23 @@ textarea {
     .Nav li {
         padding-left: 0.8em;
         padding-right: 0.8em;
+    }
+   }
+   @media screen and (max-height: 600px) {
+    .Navbar-top {
+        background-color: black;
+        height: 28vh;
+    }
+    .Wide {
+        height: 32vh;
+    }
+    .Wide img {
+        display: none;
+    }
+    .wide-title {
+        display: none;
+    }
+    .photo-credit {
+        display: none;
     }
    }

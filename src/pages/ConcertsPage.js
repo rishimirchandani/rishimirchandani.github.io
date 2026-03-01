@@ -4,10 +4,10 @@ import Wide from '../components/Wide';
 
 function ConcertsPage() {
     return (
-        <>
-            <Wide src="/carnegie2_cool.jpg" title="Concerts 2025-2026" />
+        <div className="ConcertsPage">
+            <Wide src="/carnegie2_cool.jpg" title="Concerts 2025-2026" credit="Photo: Nathaniel Johnston Photography" />
             <Events />
-        </>
+        </div>
     );
 }
 

@@ -4,10 +4,10 @@ import Wide from '../components/Wide';
 
 function AboutPage() {
     return (
-        <>
-            <Wide src="/blue.png" title="Biography" offset={40} />
+        <div className="AboutPage">
+            <Wide src="/blue.png" title="Biography" offset={40} credit="Photo: Titilayo Ayangade" />
             <About />
-        </>
+        </div>
     );
 }
 

@@ -6,7 +6,7 @@ function HomePage() {
     return (
         <>
             <Hero src="/swirl.jpg" credit="Photo: Titilayo Ayangade" />
-            <BioSection />
+            <BioSection credit="Photo: Titilayo Ayangade" />
         </>
     );
 }

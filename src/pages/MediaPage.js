@@ -19,10 +19,10 @@ function MediaPage() {
     }, [location.hash]);
     
     return (
-        <>
-            <Wide src="/log.png" title="Media" offset={40} />
+        <div className="MediaPage">
+            <Wide src="/log.png" title="Media" offset={40} credit="Photo: Sisi Burn" />
             <Media />
-        </>
+        </div>
     );
 }
 
