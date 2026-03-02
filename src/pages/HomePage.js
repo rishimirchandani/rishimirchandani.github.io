@@ -5,7 +5,7 @@ import BioSection from '../components/BioSection';
 function HomePage() {
     return (
         <>
-            <Hero src="/swirl.jpg" credit="Photo: Titilayo Ayangade" />
+            <Hero src="/rm_swirl.png" credit="Photo: Titilayo Ayangade" />
             <BioSection credit="Photo: Titilayo Ayangade" />
         </>
     );

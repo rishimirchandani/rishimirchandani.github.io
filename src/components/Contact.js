@@ -8,7 +8,7 @@ class Contact extends React.Component {
                 <center>
                 <p>For booking or private lesson inquiries, please email <a href="mailto:hello@rishimirchandani.com">hello@rishimirchandani.com</a> or use the form below.</p>
                 </center>
-                <form action="" method="POST">
+                <form action="https://formspree.io/f/xgoljzoy" method="POST">
                     <input type="text" name="name" placeholder="Name" />
                     <input type="text" name="Email" placeholder="Email" />
                     <textarea name="message" placeholder="Message"></textarea>

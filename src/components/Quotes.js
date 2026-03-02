@@ -14,7 +14,7 @@ class Quotes extends React.Component {
                 </div>
                 <div className="quote-item">
                     <p className="quote">"A bold, individual musical voice."</p>
-                    <p className="quoted">–Mark Silverman</p>
+                    <p className="quoted">–Marc Silverman</p>
                 </div>
             </div>
         )

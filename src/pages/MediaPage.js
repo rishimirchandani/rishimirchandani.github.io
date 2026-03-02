@@ -20,7 +20,7 @@ function MediaPage() {
     
     return (
         <div className="MediaPage">
-            <Wide src="/log.png" title="Media" offset={40} credit="Photo: Sisi Burn" />
+            <Wide src="/rm_log.png" title="Media" offset={40} credit="Photo: Sisi Burn" />
             <Media />
         </div>
     );

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function BioSection({ credit }) {
     return (
         <div className="BioSection">
-            <img src="/bronze.png" alt="Rishi Mirchandani" className="bio-image" />
+            <img src="/rm_bronze.png" alt="Rishi Mirchandani" className="bio-image" />
             {credit && (
                 <div className="photo-credit">{credit}</div>
             )}
