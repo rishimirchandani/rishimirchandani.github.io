@@ -123,7 +123,7 @@
         "clips": [
             {
                 "type": "youtube",
-                "heading": "Lukas Foss: Fantasy Rondo for Piano",
+                "heading": "Lukas Foss: Fantasy Rondo for Piano (1944)",
                 "subheading": null,
                 "id": "r2_4RTjLaYM",
                 "tag": "foss"
@@ -136,6 +136,27 @@
                 "tag": "stravinsky"
             },
             {
+                "type": "youtube",
+                "heading": "Mozart: Piano Sonata in F Major, K. 280",
+                "subheading": null,
+                "id": "hjLYT5N1yhU",
+                "tag": "mozart"
+            },
+            {
+                "type": "youtube",
+                "heading": "Rachmaninov: Variations on a Theme of Corelli, Op. 42",
+                "subheading": null,
+                "id": "R1HdHiOtv8M",
+                "tag": "rachmaninoff"
+            },
+            {
+                "type": "youtube",
+                "heading": "Debussy: Etude VIII (\"Pour les agréments\")",
+                "subheading": null,
+                "id": "Q6wkBrqkodc",
+                "tag": "Debussy"
+            },
+            {
                 "type": "spotify",
                 "heading": "Interview on WQED-FM Pittsburgh",
                 "subheading": null,
@@ -144,7 +165,7 @@
             },
             {
                 "type": "youtube",
-                "heading": "Ravel: Piano Concerto in G, Pittsburgh Symphony Orchestra — excerpt",
+                "heading": "Ravel: Piano Concerto in G - with Pittsburgh Symphony",
                 "subheading": null,
                 "id": "wolM_AUS9Ls",
                 "tag": "ravel"
