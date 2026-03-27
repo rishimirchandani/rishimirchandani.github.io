@@ -21,15 +21,15 @@
                 "date": "20 Nov",
                 "year": "2025",
                 "time": "5pm",
-                "title": "Faculty Recital",
-                "venue": "Charterhouse School",
+                "title": "Solo Recital",
+                "venue": "Charterhouse School (Faculty Concert)",
                 "city": "Surrey, UK"
             },
             {
                 "date": "23 Nov",
                 "year": "2025",
                 "time": "10am",
-                "title": "'Classical Coffee Morning' Recital",
+                "title": "Solo Recital",
                 "venue": "Elgar Room, Royal Albert Hall",
                 "city": "London, UK",
                 "tickets": "https://www.royalalberthall.com/tickets/events/2025/classical-coffee-mornings-rishi-mirchandani"
@@ -38,7 +38,7 @@
                 "date": "25 Nov",
                 "year": "2025",
                 "time": "11:10am",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "Wesley Memorial Church, Oxford Concert Circle",
                 "city": "Oxford, UK"
             },
@@ -46,7 +46,7 @@
                 "date": "3 Dec",
                 "year": "2025",
                 "time": "1:10pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. James Piccadilly",
                 "city": "London, UK",
                 "info": "https://www.sjp.org.uk/whats-on/rishi-mirchandani-piano/"
@@ -55,7 +55,7 @@
                 "date": "14 Jan",
                 "year": "2026",
                 "time": "1pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "Downing Place Church",
                 "city": "Cambridge, UK"
             },
@@ -63,7 +63,7 @@
                 "date": "21 Jan",
                 "year": "2026",
                 "time": "12:30pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. Botolph without Aldgate",
                 "city": "London, UK"
             },
@@ -71,7 +71,7 @@
                 "date": "29 Jan",
                 "year": "2026",
                 "time": "1pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "University Church",
                 "city": "Oxford, UK"
             },
@@ -79,7 +79,7 @@
                 "date": "11 Feb",
                 "year": "2026",
                 "time": "1:15pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. Dunstan in the West",
                 "city": "London, UK",
                 "info": "https://www.eventbrite.com/e/rishi-mirchandani-lunchtime-piano-recital-tickets-1981568971135"
@@ -88,7 +88,7 @@
                 "date": "17 Feb",
                 "year": "2026",
                 "time": "1:30pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. Michael's Highgate",
                 "city": "London, UK"
             },
@@ -96,15 +96,23 @@
                 "date": "5 Mar",
                 "year": "2026",
                 "time": "12:30pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. John's Fulham",
+                "city": "London, UK"
+            },
+            {
+                "date": "20 Mar",
+                "year": "2026",
+                "time": "1:05pm",
+                "title": "Bowen Phantasy for Viola and Piano with Karis Lee",
+                "venue": "St. Mary Abbots (RCM Lunchtime Concert)",
                 "city": "London, UK"
             },
             {
                 "date": "29 Apr",
                 "year": "2026",
                 "time": "12:30pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "Westminster Music Library",
                 "city": "London, UK",
                 "info": "https://www.eventbrite.co.uk/e/lunchtime-piano-concert-ft-rishi-mirchandani-tickets-1984465671243"
@@ -113,9 +121,41 @@
                 "date": "10 May",
                 "year": "2026",
                 "time": "3pm",
-                "title": "Recital",
+                "title": "Solo Recital",
                 "venue": "St. Michael's Church",
                 "city": "Bray, UK"
+            },
+            {
+                "date": "14 Jun",
+                "year": "2026",
+                "time": "5:10pm",
+                "title": "Duo Recital with Karis Lee, viola,",
+                "venue": "Royal College of Music",
+                "city": "London, UK"
+            },
+            {
+                "date": "17 Jun",
+                "year": "2026",
+                "time": "10:10am",
+                "title": "Schnittke Cello Sonata with Ezra Escobar, cello,",
+                "venue": "Royal College of Music",
+                "city": "London, UK"
+            },
+            {
+                "date": "9 Jul",
+                "year": "2026",
+                "time": "7:30pm",
+                "title": "Solo Recital",
+                "venue": "Carnegie Mellon University Preparatory School of Music",
+                "city": "Pittsburgh, USA"
+            },
+            {
+                "date": "10 Jul",
+                "year": "2026",
+                "time": "4:00pm",
+                "title": "Masterclass",
+                "venue": "Carnegie Mellon University Preparatory School of Music",
+                "city": "Pittsburgh, USA"
             }
         ]
     },
