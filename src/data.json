@@ -156,6 +156,22 @@
                 "title": "Masterclass",
                 "venue": "Carnegie Mellon University Preparatory School of Music",
                 "city": "Pittsburgh, USA"
+            },
+            {
+                "date": "13 Jan",
+                "year": "2027",
+                "time": "1:00pm",
+                "title": "(2027) Solo Recital",
+                "venue": "Downing Place United Reform Church",
+                "city": "Cambridge, UK"
+            },
+            {
+                "date": "1 Aug",
+                "year": "2027",
+                "time": "1:15pm",
+                "title": "(2027) Solo Recital",
+                "venue": "The Painted Church",
+                "city": "Cambridge, UK"
             }
         ]
     },
