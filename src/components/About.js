@@ -7,7 +7,7 @@ class About extends React.Component {
             <div className="Section About">
                 <div className="about-content">
                     <div className="about-text">
-                        <p> After amassing six gold medals in major national and international competitions, Indian-American pianist Rishi Mirchandani <Link to="/media#ravel">debuted</Link> as soloist with the Grammy award-winning Pittsburgh Symphony Orchestra at the age of 18. He made his first of four appearances at Carnegie Hall in New York at age 12, and he has performed to critical acclaim in England, Germany, Italy, Portugal, Spain, and the United States.</p>
+                        <p> After amassing six gold medals in major national and international competitions, Indian-American pianist Rishi Mirchandani <Link to="/media#ravel">debuted</Link> as soloist with the Grammy award-winning Pittsburgh Symphony Orchestra at the age of 18. He made his first of four appearances at Carnegie Hall in New York at age 12, and he has performed to critical acclaim in England, France, Germany, Italy, Portugal, Spain, and the United States.</p>
                     
                         <p>Mirchandani holds a bachelor's degree in mathematics, <i>summa cum laude</i>, from Yale University. He was one of twelve students (top 1%) in his year admitted to the Phi Beta Kappa honour society as a third-year student. While pursuing his mathematics degree, he also studied piano with Elizabeth Parisot and founded the <a href="http://yalepiano.org/"  target="_blank" rel="noopener noreferrer">Yale Undergraduate Piano Collective</a>.</p>
                     
