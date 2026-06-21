@@ -147,7 +147,8 @@
                 "time": "7:30pm",
                 "title": "Solo Recital",
                 "venue": "Carnegie Mellon University Preparatory School of Music",
-                "city": "Pittsburgh, USA"
+                "city": "Pittsburgh, USA",
+                "info": "https://www.cmu.edu/cfa/music/index.html#event=43901696"
             },
             {
                 "date": "10 Jul",
@@ -155,7 +156,17 @@
                 "time": "4:00pm",
                 "title": "Masterclass",
                 "venue": "Carnegie Mellon University Preparatory School of Music",
-                "city": "Pittsburgh, USA"
+                "city": "Pittsburgh, USA",
+                "info": "https://www.cmu.edu/cfa/music/index.html#event=43901697"
+            },
+            {
+                "date": "12 Sep",
+                "year": "2026",
+                "time": "6:30pm",
+                "title": "'The Devil in Music': A Lecture-Recital on Maths and Music",
+                "venue": "St. John's Fulham",
+                "city": "London, UK",
+                "info": "https://www.instagram.com/p/DZulF-5oT7m/"
             },
             {
                 "date": "18 Dec",
