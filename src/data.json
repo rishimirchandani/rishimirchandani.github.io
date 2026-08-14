@@ -8,157 +8,7 @@
         "_comment": "There are 4 types of clips that are supported: youtube, spotify-playlist, mp3, and video. id defines the source of the clip, and should be set as follows.  For youtube, whatever comes after v= in the URL. For spotify-playlist, the URI (right click playlist to get this). For mp3, place the entire public Google Drive link (it should end with /preview).",
 
         "concerts": [
-            {
-                "date": "3–7 Nov",
-                "year": "2025",
-                "time": "8:40am",
-                "title": "'Morning Calm' Recitals",
-                "venue": "St. George Hanover Square",
-                "city": "London, UK",
-                "tickets": "https://www.eventbrite.co.uk/e/morning-calm-rishi-mirchandani-tickets-1659669489119"
-            },
-            {
-                "date": "20 Nov",
-                "year": "2025",
-                "time": "5pm",
-                "title": "Solo Recital",
-                "venue": "Charterhouse School (Faculty Concert)",
-                "city": "Surrey, UK"
-            },
-            {
-                "date": "23 Nov",
-                "year": "2025",
-                "time": "10am",
-                "title": "Solo Recital",
-                "venue": "Elgar Room, Royal Albert Hall",
-                "city": "London, UK",
-                "tickets": "https://www.royalalberthall.com/tickets/events/2025/classical-coffee-mornings-rishi-mirchandani"
-            },
-            {
-                "date": "25 Nov",
-                "year": "2025",
-                "time": "11:10am",
-                "title": "Solo Recital",
-                "venue": "Wesley Memorial Church, Oxford Concert Circle",
-                "city": "Oxford, UK"
-            },
-            {
-                "date": "3 Dec",
-                "year": "2025",
-                "time": "1:10pm",
-                "title": "Solo Recital",
-                "venue": "St. James Piccadilly",
-                "city": "London, UK",
-                "info": "https://www.sjp.org.uk/whats-on/rishi-mirchandani-piano/"
-            },
-            {
-                "date": "14 Jan",
-                "year": "2026",
-                "time": "1pm",
-                "title": "Solo Recital",
-                "venue": "Downing Place Church",
-                "city": "Cambridge, UK"
-            },
-            {
-                "date": "21 Jan",
-                "year": "2026",
-                "time": "12:30pm",
-                "title": "Solo Recital",
-                "venue": "St. Botolph without Aldgate",
-                "city": "London, UK"
-            },
-            {
-                "date": "29 Jan",
-                "year": "2026",
-                "time": "1pm",
-                "title": "Solo Recital",
-                "venue": "University Church",
-                "city": "Oxford, UK"
-            },
-            {
-                "date": "11 Feb",
-                "year": "2026",
-                "time": "1:15pm",
-                "title": "Solo Recital",
-                "venue": "St. Dunstan in the West",
-                "city": "London, UK",
-                "info": "https://www.eventbrite.com/e/rishi-mirchandani-lunchtime-piano-recital-tickets-1981568971135"
-            },
-            {
-                "date": "17 Feb",
-                "year": "2026",
-                "time": "1:30pm",
-                "title": "Solo Recital",
-                "venue": "St. Michael's Highgate",
-                "city": "London, UK"
-            },
-            {
-                "date": "5 Mar",
-                "year": "2026",
-                "time": "12:30pm",
-                "title": "Solo Recital",
-                "venue": "St. John's Fulham",
-                "city": "London, UK"
-            },
-            {
-                "date": "20 Mar",
-                "year": "2026",
-                "time": "1:05pm",
-                "title": "Bowen Phantasy for Viola and Piano with Karis Lee",
-                "venue": "St. Mary Abbots (RCM Lunchtime Concert)",
-                "city": "London, UK"
-            },
-            {
-                "date": "29 Apr",
-                "year": "2026",
-                "time": "12:30pm",
-                "title": "Solo Recital",
-                "venue": "Westminster Music Library",
-                "city": "London, UK",
-                "info": "https://www.eventbrite.co.uk/e/lunchtime-piano-concert-ft-rishi-mirchandani-tickets-1984465671243"
-            },
-            {
-                "date": "10 May",
-                "year": "2026",
-                "time": "3pm",
-                "title": "Solo Recital",
-                "venue": "St. Michael's Church",
-                "city": "Bray, UK"
-            },
-            {
-                "date": "14 Jun",
-                "year": "2026",
-                "time": "5:10pm",
-                "title": "Duo Recital with Karis Lee, viola,",
-                "venue": "Royal College of Music",
-                "city": "London, UK"
-            },
-            {
-                "date": "17 Jun",
-                "year": "2026",
-                "time": "10:10am",
-                "title": "Schnittke Cello Sonata with Ezra Escobar, cello,",
-                "venue": "Royal College of Music",
-                "city": "London, UK"
-            },
-            {
-                "date": "9 Jul",
-                "year": "2026",
-                "time": "7:30pm",
-                "title": "Solo Recital",
-                "venue": "Carnegie Mellon University Preparatory School of Music",
-                "city": "Pittsburgh, USA",
-                "info": "https://www.cmu.edu/cfa/music/index.html#event=43901696"
-            },
-            {
-                "date": "10 Jul",
-                "year": "2026",
-                "time": "4:00pm",
-                "title": "Masterclass",
-                "venue": "Carnegie Mellon University Preparatory School of Music",
-                "city": "Pittsburgh, USA",
-                "info": "https://www.cmu.edu/cfa/music/index.html#event=43901697"
-            },
+            
             {
                 "date": "12 Sep",
                 "year": "2026",
@@ -180,9 +30,17 @@
                 "date": "13 Jan",
                 "year": "2027",
                 "time": "1:00pm",
-                "title": "(2027) Solo Recital",
+                "title": "Solo Recital",
                 "venue": "Downing Place United Reform Church",
                 "city": "Cambridge, UK"
+            },
+            {
+                "date": "25 Feb",
+                "year": "2027",
+                "time": "1:00pm",
+                "title": "Solo Recital",
+                "venue": "University Church",
+                "city": "Oxford, UK"
             },
             {
                 "date": "1 Aug",
