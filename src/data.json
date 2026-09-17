@@ -24,15 +24,16 @@
                 "title": "'The Devil in Music': A Lecture-Recital on Maths and Music",
                 "venue": "St. John's Fulham",
                 "city": "London, UK",
-                "info": "https://www.instagram.com/p/DZulF-5oT7m/"
+                "info": "https://www.eventbrite.co.uk/e/st-johns-fulhamsend-lecture-recital-the-devil-in-music-tickets-1992049488645"
             },
             {
                 "date": "18 Dec",
                 "year": "2026",
                 "time": "12:00pm",
                 "title": "Solo Recital",
-                "venue": "Pallant House",
-                "city": "Chichester, UK"
+                "venue": "Pallant House Gallery",
+                "city": "Chichester, UK",
+                "info": "https://pallant.org.uk/whats-on/pallant-proms/"
             },
             {
                 "date": "13 Jan",
@@ -51,12 +52,20 @@
                 "city": "Oxford, UK"
             },
             {
-                "date": "1 Aug",
+                "date": "29 Jun",
                 "year": "2027",
-                "time": "1:15pm",
-                "title": "(2027) Solo Recital",
-                "venue": "The Painted Church",
-                "city": "Cambridge, UK"
+                "time": "1:00pm",
+                "title": "Solo Recital",
+                "venue": "St. James's Church Sussex Gardens",
+                "city": "London, UK"
+            },
+            {
+                "date": "7 Jul",
+                "year": "2027",
+                "time": "1:00pm",
+                "title": "Song Recital with Maria Kożewnikow, soprano,",
+                "venue": "Gustav Mahler's Birthplace",
+                "city": "Kaliště, CZ"
             }
         ]
     },
