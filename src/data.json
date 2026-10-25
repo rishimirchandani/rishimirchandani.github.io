@@ -8,15 +8,6 @@
         "_comment": "There are 4 types of clips that are supported: youtube, spotify-playlist, mp3, and video. id defines the source of the clip, and should be set as follows.  For youtube, whatever comes after v= in the URL. For spotify-playlist, the URI (right click playlist to get this). For mp3, place the entire public Google Drive link (it should end with /preview).",
 
         "concerts": [
-             {
-                "date": "28 Aug",
-                "year": "2026",
-                "time": "7:00pm",
-                "title": "Final Concert of IPASA Lied Academy",
-                "venue": "Barokní refektář Profesního domu",
-                "city": "Prague, CZ",
-                "info": "https://www.ipasa.org/events/final-concert-of-lied-academy-2026/"
-            },
             {
                 "date": "12 Sep",
                 "year": "2026",
